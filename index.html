@@ -1,13 +1,484 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/svg/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <meta
+      name="description"
+      content="Transformamos tus ideas en herramientas digitales que impulsan tu
+        negocio."
+    />
+    <title>Koden</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body
+    class="flex flex-col justify-center items-center mt-[3.625rem] font-satoshi"
+  >
+    <script type="module" src="/src/toggle.ts"></script>
+    <!-- HEADER -->
+    <header class="flex items-center gap-5">
+      <img src="/svg/logo_name.svg" alt="Koden" class="w-[5.375rem]" />
+      <nav
+        class="rounded-2xl divide-x divide-[#737575] bg-deepGray px-5 py-6 flex items-center text-xl font-medium"
+      >
+        <a href="#home" class="pr-6 leading-none">Home</a>
+        <a href="#about" class="px-6 leading-none">About</a>
+        <a href="#services" class="px-6 leading-none">Services</a>
+        <a href="" class="px-6 leading-none">Work with us</a>
+        <div class="pl-6">
+          <button
+            type="button"
+            href=""
+            class="bg-whiteBG rounded-2xl leading-none text-deepGray px-4 py-3 flex items-center gap-[0.625rem]"
+          >
+            Contacto
+            <img
+              src="/icons/arrow_outward.svg"
+              alt="Contacto flecha"
+              class="size-6"
+            />
+          </button>
+        </div>
+      </nav>
+    </header>
+    <!-- HERO -->
+    <main
+      id="home"
+      class="relative flex flex-col items-center text-center bg-gradient-to-r from-[#1B5299]/80 via-50% via-[#7B9BC4]/80 to-[#6F6FA6]/80 rounded-2xl backdrop-blur-3xl pt-10 px-32"
+    >
+      <div
+        class="absolute top-0 bg-gradient-to-b from-[#0e1111] via-[#0e1111] via-[70%] to- w-full h-full"
+      ></div>
+      <h1 class="text-[4rem] font-bold relative z-10">
+        Soluciones a la medida
+      </h1>
+      <p class="text-xl font-light mt-5 z-10 relative">
+        Transformamos tus ideas en herramientas digitales que impulsan tu
+        negocio.
+      </p>
+      <button
+        type="button"
+        class="bg-whiteBG text-deepGray text-base py-3 px-4 rounded-2xl font-medium inline-flex items-center gap-[0.625rem] mt-10 z-10 w-auto"
+      >
+        Discover more
+        <img
+          src="/icons/arrow_upward_alt.svg"
+          alt="Discover more"
+          class="size-6"
+        />
+      </button>
+      <div
+        class="flex relative bg-gradient-to-r pt-32 from-[#1B5299] to-[#9F9FED] text-transparent bg-clip-text"
+      >
+        <p class="text-[8rem] w-full font-bold pt-28 mr-8 text-transparent">
+          Koden
+        </p>
+        <img src="/svg/phone_hero.svg" alt="" class="-mb-6" />
+        <p class="text-[8rem] w-full font-bold pt-28 -ml-32 text-transparent">
+          Labs
+        </p>
+      </div>
+    </main>
+    <!-- ABOUT  -->
+    <section
+      id="about"
+      class="text-center py-[5.75rem] flex flex-col justify-center items-center"
+    >
+      <h2 class="text-[4rem] font-bold w-[50rem]">
+        Impulsados por la innovación
+      </h2>
+      <p class="w-[50rem] font-light text-xl">
+        Somos expertos en tecnología, diseño y desarrollo.
+      </p>
+      <p class="w-[50rem] font-light text-xl">
+        Ofrecemos soluciones personalizadas y de alta calidad a cada cliente.
+      </p>
+      <div class="flex pt-[5.125rem] space-x-[8.375rem] text-left">
+        <div class="max-w-[50rem] space-y-[3.75rem] pt-24">
+          <article class="flex items-start gap-5">
+            <img
+              src="/icons/upgrade.svg"
+              alt="Innovar, automatizar y optimizar"
+              class="size-[2.625rem]"
+            />
+            <span class>
+              <h3 class="text-[2rem] leading-none font-bold">
+                Innovar, automatizar y optimizar
+              </h3>
+              <p>
+                Somos un equipo apasionado por la tecnología, enfocados en
+                ofrecer soluciones tecnológicas personalizadas para empresas que
+                buscan crecer y adaptarse al mundo digital.
+              </p>
+            </span>
+          </article>
+          <article class="flex items-start gap-5">
+            <img
+              src="/icons/workspace_premium.svg"
+              alt="Comprometidos con la calidad"
+              class="size-[2.625rem]"
+            />
+            <span>
+              <h3 class="text-[2rem] leading-none font-bold">
+                Comprometidos con la calidad
+              </h3>
+              <p>
+                Nos aseguramos de que cada proyecto que entregamos cumpla con
+                los más altos estándares de excelencia, desde la fase de
+                planificación hasta la implementación final.
+              </p>
+            </span>
+          </article>
+        </div>
+        <aside>
+          <img src="/svg/image1.svg" alt="" srcset="" />
+        </aside>
+      </div>
+    </section>
+    <!-- Services section -->
+    <section
+      id="services"
+      class="flex flex-col items-center pt-[5.625rem] text-whiteBG"
+    >
+      <article class="flex items-center gap-[2.9375rem]">
+        <div class="max-w-[43rem]">
+          <h2 class="text-left max-w-[35.25rem]">Conoce nuestros servicios</h2>
+          <p class="text-xl font-light">
+            Ofrecemos una gama completa de servicios digitales diseñados para
+            impulsar la transformación y el crecimiento de tu negocio. Nuestro
+            equipo combina tecnología de vanguardia con creatividad para ofrecer
+            soluciones que se adaptan a las necesidades específicas de cada
+            cliente.
+          </p>
+        </div>
+        <aside>
+          <img src="/svg/image2.svg" alt="Conoce nuestros servicios" />
+        </aside>
+      </article>
+    </section>
+    <!-- Services description -->
+    <section
+      class="pt-[5.625rem] flex flex-col items-center"
+      id="toggle-services-container"
+    >
+      <nav
+        class="rounded-2xl divide-x divide-[#737575] bg-deepGray px-5 py-6 text-xl font-medium"
+        id="toggle-services"
+      >
+        <span class="pr-6">
+          <button type="button" class="leading-none selected" value="1">
+            Desarrollo
+          </button>
+        </span>
+        <span class="px-6">
+          <button type="button" class="leading-none" value="2">
+            Marketing digital
+          </button>
+        </span>
+        <span class="px-6">
+          <button type="button" class="leading-none" value="3">
+            IA/Blockchain
+          </button>
+        </span>
+        <span class="pl-6">
+          <button type="button" class="leading-none" value="4">
+            ERP y CRM
+          </button>
+        </span>
+      </nav>
+      <!-- Content 1 -->
+      <div class="gap-36 pt-[5.625rem] flex" content-toggle="1">
+        <div class="w-[48rem]">
+          <article class="space-y-10">
+            <h2 class="">Poderosas soluciones de software</h2>
+            <p>
+              Utilizamos tecnología avanzada y un enfoque estratégico para
+              desarrollar productos que impulsan la innovación, la eficiencia y
+              el crecimiento empresarial.
+            </p>
+          </article>
+          <section class="space-y-[3.75rem] pt-20">
+            <article class="flex gap-5">
+              <img
+                src="/icons/developer_mode_tv.svg"
+                alt="Desarrollo web"
+                class="size-12"
+              />
+              <div class="space-y-5">
+                <h3 class="leading-none">Desarrollo web</h3>
+                <p>
+                  Creamos sitios web adaptados a tus necesidades, con diseños
+                  responsivos y funcionalidades avanzadas. Optimizados para
+                  mejorar la conversión.
+                </p>
+              </div>
+            </article>
+            <article class="flex gap-5">
+              <img
+                src="/icons/developer_mode.svg"
+                alt="Desarrollo móvil"
+                class="size-12"
+              />
+              <div class="space-y-5">
+                <h3 class="leading-none">Desarrollo móvil</h3>
+                <p>
+                  Desarrollamos aplicaciones móviles multiplataforma que brindan
+                  una experiencia fluida en iOS como en Android. Utilizamos
+                  tecnologías rápidas y eficientes.
+                </p>
+              </div>
+            </article>
+            <article class="flex gap-5">
+              <img
+                src="/icons/interactive_space.svg"
+                alt="Interfaces y UX"
+                class="size-12"
+              />
+              <div class="space-y-5">
+                <h3 class="leading-none">
+                  Diseño de interfaces y experiencia de usuario (UX/UI)
+                </h3>
+                <p>
+                  Nuestro equipo de diseño UX/UI crea interfaces intuitivas que
+                  mejoran la interacción con los usuarios, asegurando que cada
+                  detalle ofrezca una experiencia de usuario memorable.
+                </p>
+              </div>
+            </article>
+            <button
+              type="button"
+              class="bg-whiteBG text-deepGray text-base font-medium rounded-2xl space-x-2.5 flex py-3 px-4 items-center"
+            >
+              Conoce todas las soluciones de desarrollo
+              <img
+                src="/icons/arrow_upward_alt.svg"
+                alt="Conoce todas las soluciones de desarrollo"
+                class="-rotate-90"
+              />
+            </button>
+          </section>
+        </div>
+        <aside>
+          <img src="/svg/technologies.svg" alt="Tecnologías" class="pt-20" />
+        </aside>
+      </div>
+      <!-- Content toggle 2 -->
+      <div class="gap-36 pt-[5.625rem] hidden" content-toggle="2">
+        <div class="w-[48rem]">
+          <article class="space-y-10">
+            <h2 class="">Estrategias definitivas</h2>
+            <p>
+              estrategias de marketing digital efectivas que maximizan tu
+              presencia en línea y te ayudan a alcanzar tus objetivos de
+              negocio.
+            </p>
+          </article>
+          <section class="space-y-[3.75rem] pt-20">
+            <article class="flex gap-5">
+              <img
+                src="/icons/brush.svg"
+                alt="Marketing digital"
+                class="size-12"
+              />
+              <div class="space-y-5">
+                <h3 class="leading-none">Marketing digital</h3>
+                <p>
+                  Creamos sitios web adaptados a tus necesidades, con diseños
+                  responsivos y funcionalidades avanzadas. Optimizados para
+                  mejorar la conversión.
+                </p>
+              </div>
+            </article>
+            <article class="flex gap-5">
+              <img src="/icons/emoji_events.svg" alt="SEO" class="size-12" />
+              <div class="space-y-5">
+                <h3 class="leading-none">SEO</h3>
+                <p>
+                  Mejoramos el posicionamiento de tu sitio web en los motores de
+                  búsqueda con estrategias que impulsan el tráfico orgánico y
+                  aumentan la relevancia de tu contenido para los usuarios.
+                </p>
+              </div>
+            </article>
+            <article class="flex gap-5">
+              <img
+                src="/icons/bid_landscape.svg"
+                alt="Análisis y Reportes"
+                class="size-12"
+              />
+              <div class="space-y-5">
+                <h3 class="leading-none">Análisis y Reportes</h3>
+                <p>
+                  Ofrecemos análisis detallados y reportes claros para medir el
+                  rendimiento de tus campañas y ayudarte a tomar decisiones
+                  informadas que optimicen el retorno de inversión (ROI) de tus
+                  esfuerzos de marketing.
+                </p>
+              </div>
+            </article>
+            <button
+              type="button"
+              class="bg-whiteBG text-deepGray text-base font-medium rounded-2xl space-x-2.5 flex py-3 px-4 items-center"
+            >
+              Conoce todas las soluciones de marketing
+              <img
+                src="/icons/arrow_upward_alt.svg"
+                alt="Conoce todas las soluciones de desarrollo"
+                class="-rotate-90"
+              />
+            </button>
+          </section>
+        </div>
+        <aside>
+          <img src="/svg/technologies.svg" alt="Tecnologías" class="pt-20" />
+        </aside>
+      </div>
+      <!-- Content toggle 3 -->
+      <div class="gap-36 pt-[5.625rem] hidden" content-toggle="3">
+        <div class="w-[48rem]">
+          <article class="space-y-10">
+            <h2 class="">Soluciones de ultima generación</h2>
+            <p>
+              Te ayudamos a prepararte para el futuro con soluciones
+              tecnológicas avanzadas que transforman la manera en que
+              interactúas con los datos, los sistemas y tus clientes
+            </p>
+          </article>
+          <section class="space-y-[3.75rem] pt-20">
+            <article class="flex gap-5">
+              <img
+                src="/icons/ai.svg"
+                alt="Inteligencia artificial"
+                class="size-12"
+              />
+              <div class="space-y-5">
+                <h3 class="leading-none">Inteligencia artificial</h3>
+                <p>
+                  Desarrollamos soluciones de IA a medida para automatizar
+                  procesos, mejorar la toma de decisiones y aumentar la
+                  eficiencia operativa.
+                </p>
+              </div>
+            </article>
+            <article class="flex gap-5">
+              <img
+                src="/icons/currency_bitcoin.svg"
+                alt="Bitcoin"
+                class="size-12"
+              />
+              <div class="space-y-5">
+                <h3 class="leading-none">Cripto</h3>
+                <p>
+                  Integramos sistemas de pago y gestión de criptoactivos que te
+                  permiten adoptar nuevas formas de transacciones digitales
+                </p>
+              </div>
+            </article>
+            <article class="flex gap-5">
+              <img
+                src="/icons/blockchain.svg"
+                alt="Blockchain"
+                class="size-12"
+              />
+              <div class="space-y-5">
+                <h3 class="leading-none">Web3 y blockchain</h3>
+                <p>
+                  Te brindamos soluciones descentralizadas que transforman la
+                  manera en que interactúas con la tecnología. Desarrollamos
+                  infraestructuras en blockchain para asegurar transacciones
+                  confiables, contratos inteligentes.
+                </p>
+              </div>
+            </article>
+            <button
+              type="button"
+              class="bg-whiteBG text-deepGray text-base font-medium rounded-2xl space-x-2.5 flex py-3 px-4 items-center"
+            >
+              Conoce todas las soluciones de IA y blockchain
+              <img
+                src="/icons/arrow_upward_alt.svg"
+                alt="Conoce todas las soluciones de desarrollo"
+                class="-rotate-90"
+              />
+            </button>
+          </section>
+        </div>
+        <aside>
+          <img src="/svg/technologies.svg" alt="Tecnologías" class="pt-20" />
+        </aside>
+      </div>
+      <!-- Content toggle 4 -->
+      <div class="gap-36 pt-[5.625rem] hidden" content-toggle="4">
+        <div class="w-[48rem]">
+          <article class="space-y-10">
+            <h2 class="">Soluciones de ultima generación</h2>
+            <p>
+              Nisl nunc mi ipsum faucibus. Fringilla est ullamcorper eget nulla.
+              Nisi porta lorem.
+            </p>
+          </article>
+          <section class="space-y-[3.75rem] pt-20">
+            <article class="flex gap-5">
+              <img
+                src="/icons/precision_manufacturing.svg"
+                alt="Monitoreo y control remoto"
+                class="size-12"
+              />
+              <div class="space-y-5">
+                <h3 class="leading-none">Monitoreo y control remoto</h3>
+                <p>
+                  Implementamos soluciones que permiten el monitoreo y control
+                  remoto de los dispositivos embebidos, facilitando la
+                  supervisión en tiempo real y la intervención en caso de
+                  fallos.
+                </p>
+              </div>
+            </article>
+            <article class="flex gap-5">
+              <img
+                src="/icons/construction.svg"
+                alt="Soporte técnico y mantenimiento"
+                class="size-12"
+              />
+              <div class="space-y-5">
+                <h3 class="leading-none">Soporte técnico y mantenimiento</h3>
+                <p>
+                  Proveemos soporte continuo para asegurar que los sistemas
+                  embebidos operen de manera confiable y eficiente, incluyendo
+                  actualizaciones de software, reparación de fallos y mejoras de
+                  rendimiento.
+                </p>
+              </div>
+            </article>
+            <article class="flex gap-5">
+              <img src="/icons/gavel.svg" alt="Normativas" class="size-12" />
+              <div class="space-y-5">
+                <h3 class="leading-none">Cumplimiento de normativas</h3>
+                <p>
+                  Nos aseguramos de que los dispositivos embebidos cumplan con
+                  las normativas y estándares de la industria, garantizando la
+                  seguridad y la fiabilidad de los datos recogidos.
+                </p>
+              </div>
+            </article>
+            <button
+              type="button"
+              class="bg-whiteBG text-deepGray text-base font-medium rounded-2xl space-x-2.5 flex py-3 px-4 items-center"
+            >
+              Conoce todas las soluciones de ERP y CRM
+              <img
+                src="/icons/arrow_upward_alt.svg"
+                alt="Conoce todas las soluciones de ERP y CRM"
+                class="-rotate-90"
+              />
+            </button>
+          </section>
+        </div>
+        <aside>
+          <img src="/svg/technologies.svg" alt="Tecnologías" class="pt-20" />
+        </aside>
+      </div>
+    </section>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
