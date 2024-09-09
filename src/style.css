@@ -48,6 +48,7 @@
   .divider {
     @apply h-[1.8125rem] w-[0.0625rem];
   }
+
   h2 {
     @apply text-[4rem] font-bold leading-normal text-whiteBG;
   }
