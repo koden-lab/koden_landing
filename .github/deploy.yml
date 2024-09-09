@@ -1,4 +1,4 @@
-name: Deploy to SIGPAD Server
+name: Deploy to KODEN Server
 
 on:
   push:
