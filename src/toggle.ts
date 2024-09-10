@@ -1,6 +1,4 @@
 export const setupToggle = (idToggle: string, idToggleContainer: string) => {
-  let active = "1";
-
   const toggleGroup = document.querySelector(`#${idToggle}`);
   const toggleContainer = document.querySelector(`#${idToggleContainer}`);
 
@@ -13,8 +11,6 @@ export const setupToggle = (idToggle: string, idToggleContainer: string) => {
 
   toggles.forEach((v) => {
     v.addEventListener("click", () => {
-      active = v.value;
-      console.log(active);
       toggles.forEach((t) => t.classList.remove("selected"));
       contents.forEach((c) => {
         c.classList.remove("flex");
