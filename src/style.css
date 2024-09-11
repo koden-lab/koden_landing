@@ -94,7 +94,7 @@
     @apply text-[#8D8D8D] text-base font-medium  pt-[1rem];
   }
   textarea {
-    @apply rounded-lg p-2.5 text-deepGray placeholder-[#818181] text-sm font-medium bg-[#E7E7E7] leading-normal resize-none w-full;
+    @apply rounded-lg p-2.5 text-deepGray placeholder-[#818181] text-sm font-medium bg-[#E7E7E7] leading-normal resize-none w-full outline-none;
   }
   button.send {
     @apply bg-deepGray text-whiteBG py-3 px-4 flex items-center justify-center gap-2.5 rounded-2xl mt-4;

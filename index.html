@@ -44,8 +44,18 @@
     <!-- HERO -->
     <main
       id="home"
-      class="relative flex flex-col items-center text-center bg-gradient-to-r from-[#1B5299]/80 via-50% via-[#7B9BC4]/80 to-[#6F6FA6]/80 rounded-2xl backdrop-blur-3xl pt-10 px-32"
+      class="relative flex flex-col items-center text-center bg-gradient-to-r from-[#1B5299]/80 via-50% via-[#7B9BC4]/80 to-[#6F6FA6]/80 rounded-2xl backdrop-blur-3xl pt-10 px-32 sm:w-[85rem] 2xl:w-[105.4375rem]"
     >
+      <img
+        src="/svg/shape_hero_1.svg"
+        class="absolute bottom-[4rem] left-[8rem] size-[8.75rem] z-10"
+        alt=""
+      />
+      <img
+        src="/svg/shape_hero_2.svg"
+        class="absolute bottom-[20rem] right-[8rem] size-[6.75rem] z-10"
+        alt=""
+      />
       <div
         class="absolute top-0 bg-gradient-to-b from-[#0e1111] via-[#0e1111] via-[70%] to- w-full h-full"
       ></div>
@@ -69,7 +79,7 @@
       </button>
       <div class="flex relative pt-32 items-start">
         <p
-          class="text-[8rem] w-full font-bold pt-28 mr-8 bg-gradient-to-r from-[#1B5299] to-[12.95%] to-[#9F9FED] text-transparent bg-clip-text"
+          class="text-[8rem] w-full font-bold pt-16 mr-8 bg-gradient-to-r from-[#1B5299] to-[12.95%] to-[#9F9FED] text-transparent bg-clip-text"
         >
           Koden
         </p>
@@ -81,7 +91,7 @@
           />
         </div>
         <p
-          class="text-[8rem] w-full font-bold pt-28 -ml-32 bg-gradient-to-r from-[#1B5299] to-[12.95%] to-[#9F9FED] text-transparent bg-clip-text"
+          class="text-[8rem] w-full font-bold pt-16 -ml-32 bg-gradient-to-r from-[#1B5299] to-[12.95%] to-[#9F9FED] text-transparent bg-clip-text"
         >
           Labs
         </p>
@@ -153,7 +163,7 @@
       id="services"
       class="flex flex-col items-center pt-[5.625rem] text-whiteBG"
     >
-      <article class="flex items-center gap-[2.9375rem]">
+      <article class="flex items-center gap-[5rem]">
         <div class="max-w-[40rem]">
           <h2 class="text-left max-w-[35.25rem]">Conoce nuestros servicios</h2>
           <p class="text-xl font-light">
@@ -538,7 +548,30 @@
       </div>
     </section>
     <!-- How we work -->
-    <section class="text-whiteBG text-center w-full py-[14.0625rem]" id="work">
+    <section
+      class="text-whiteBG text-center w-full py-[14.0625rem] relative"
+      id="work"
+    >
+      <img
+        src="/svg/crystal.svg"
+        class="absolute top-0 left-40 size-[20.5rem]"
+        alt=""
+      />
+      <img
+        src="/svg/crystal2.svg"
+        class="absolute top-[20rem] right-[8rem] size-[17.25rem]"
+        alt=""
+      />
+      <img
+        src="/svg/code.svg"
+        class="absolute top-[12rem] right-[7.5rem] w-[6.8125rem] h-[5.25rem]"
+        alt=""
+      />
+      <img
+        src="/svg/code2.svg"
+        class="absolute top-[30rem] left-[10rem] w-[6.39419rem] h-[4.83238rem]"
+        alt=""
+      />
       <h2
         class="text-8xl font-bold bg-gradient-to-r from-[#1B5299] to-[12.95%] to-[#9F9FED] bg-clip-text text-transparent leading-normal"
       >
@@ -547,7 +580,18 @@
       <p class="text-xl font-light">
         Conoce nuestro paso a paso para construir soluciones avanzadas
       </p>
-      <div class="flex items-start justify-between w-full">
+      <button
+        type="button"
+        class="bg-whiteBG text-deepGray text-base py-3 px-4 rounded-2xl font-medium inline-flex items-center gap-[0.625rem] mt-10 z-10 w-auto"
+      >
+        Descubre más
+        <img
+          src="/svg_icons/arrow_upward_alt.svg"
+          alt="Discover more"
+          class="size-6"
+        />
+      </button>
+      <div class="flex items-start justify-between w-full pt-64">
         <div
           class="text-left flex flex-col items-center justify-center pl-[8.375rem]"
         >
@@ -1125,9 +1169,19 @@
     </section>
     <!-- Contacto -->
     <section
-      class="contact w-full flex flex-col items-center py-[10rem]"
+      class="contact w-full flex flex-col items-center py-[10rem] relative"
       id="contact"
     >
+      <img
+        src="/svg/shape_contact_1.svg"
+        class="absolute top-0 left-0"
+        alt=""
+      />
+      <img
+        src="/svg/shape_contact_2.svg"
+        class="absolute bottom-0 right-0"
+        alt=""
+      />
       <div class="flex gap-6">
         <div>
           <h2 class="text-[2.5rem] font-bold pb-[1.875rem]">Escríbenos</h2>
@@ -1190,7 +1244,15 @@
         </div>
       </div>
     </section>
-    <footer class="py-[5.625rem] text-center flex items-center flex-col gap-10">
+    <footer
+      class="py-[5.625rem] text-center flex items-center flex-col gap-10 relative w-full"
+    >
+      <img src="/svg/shape_footer_1.svg" class="absolute top-0 left-0" alt="" />
+      <img
+        src="/svg/shape_footer_2.svg"
+        class="absolute bottom-0 right-0"
+        alt=""
+      />
       <div class="space-y-[1.5625rem]">
         <h2 class="text-[3rem] font-bold">Comencemos tu viaje al éxito</h2>
         <p class="font-medium">
