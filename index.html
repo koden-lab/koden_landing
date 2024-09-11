@@ -10,11 +10,53 @@
         negocio."
     />
     <title>Koden</title>
+
+    <script>
+      async function handleFormSubmit(event) {
+        event.preventDefault();
+
+        contact_number = event.currentTarget.id === "form2" ? "2" : "";
+
+        const formData = new FormData(event.target);
+
+        try {
+          const response = await fetch(`/api/contact${contact_number}`, {
+            method: "POST",
+            body: formData,
+          });
+
+          if (response.ok) {
+            const result = await response.json();
+            if (!result) return console.error("No se pudo enviar");
+
+            const toaster = document.querySelector("#toaster");
+            toaster.classList.remove("-top-40");
+            toaster.classList.add("top-4");
+
+            setTimeout(() => {
+              toaster.classList.remove("top-4");
+              toaster.classList.add("-top-40");
+            }, 5000);
+
+            // event.target.reset();
+          } else {
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    </script>
   </head>
   <body
-    class="flex flex-col justify-center items-center mt-[3.625rem] font-satoshi"
+    class="flex flex-col justify-center items-center mt-[3.625rem] font-satoshi relative"
   >
     <script type="module" src="/src/toggle.ts"></script>
+    <div
+      id="toaster"
+      class="fixed -top-40 z-50 bg-[#1A1A1A]/50 backdrop-blur-md rounded-lg px-[1.5rem] py-[1rem] text-xl transition-all"
+    >
+      Pronto nos contactaremos contigo.
+    </div>
     <!-- HEADER -->
     <header class="flex items-center gap-5">
       <img src="/svg/logo_name.svg" alt="Koden" class="w-[5.375rem]" />
@@ -1174,18 +1216,21 @@
     >
       <img
         src="/svg/shape_contact_1.svg"
-        class="absolute top-0 left-0"
+        class="absolute top-0 left-0 sm:w-[394.625px] 2xl:[451px]"
         alt=""
       />
       <img
         src="/svg/shape_contact_2.svg"
-        class="absolute bottom-0 right-0"
+        class="absolute bottom-0 right-0 sm:w-[429.625px] 2xl:w-[491px]"
         alt=""
       />
-      <div class="flex gap-6">
+      <div class="flex gap-6 z-10">
         <div>
           <h2 class="text-[2.5rem] font-bold pb-[1.875rem]">Escríbenos</h2>
-          <form class="bg-white rounded-xl p-10 flex flex-col items-start">
+          <form
+            class="bg-white rounded-xl p-10 flex flex-col items-start"
+            onsubmit="handleFormSubmit(event)"
+          >
             <div class="flex gap-5">
               <span class="flex flex-col flex-1">
                 <label class="primary" for="nombre">Nombre</label>
@@ -1193,6 +1238,7 @@
                   class="primary"
                   type="text"
                   id="nombre"
+                  name="nombre"
                   placeholder="Juan"
                 />
               </span>
@@ -1202,16 +1248,17 @@
                   class="primary"
                   type="text"
                   id="apellido"
+                  name="apellido"
                   placeholder="Pérez"
                 />
               </span>
             </div>
             <label class="primary" for="telefono">Número de teléfono</label>
-            <input class="primary" type="tel" id="telefono" />
-            <label class="primary" for="company">Compañía (Opcional) ???</label>
-            <input class="primary" type="tel" id="company" />
-            <label class="primary" for="mensaje">Detalles adicionales</label>
-            <textarea id="mensaje"></textarea>
+            <input class="primary" type="tel" id="telefono" name="telefono" />
+            <label class="primary" for="company">Compañía (Opcional)</label>
+            <input class="primary" type="tel" id="company" name="company" />
+            <label class="primary" for="detalles">Detalles adicionales</label>
+            <textarea id="detalles" name="detalles"></textarea>
             <button type="submit" class="send">
               Enviar
               <img src="/svg_icons/arrow_upward_white.svg" alt="" />
@@ -1229,13 +1276,15 @@
           </p>
           <form
             class="bg-white rounded-xl px-10 py-[1.5625rem] flex flex-col items-start mt-[1.625rem]"
+            id="form2"
+            onsubmit="handleFormSubmit(event)"
           >
             <label class="secondary" for="email">Correo electrónico</label>
-            <input class="secondary" type="email" id="email" />
+            <input class="secondary" type="email" id="email" name="email" />
             <label class="secondary" for="tel2">Teléfono</label>
-            <input class="secondary" type="tel" id="tel2" />
+            <input class="secondary" type="tel" id="tel2" name="telefono" />
             <label class="secondary" for="help">Ayuda y soporte</label>
-            <input class="secondary" type="text" id="help" />
+            <input class="secondary" type="text" id="help" name="help" />
             <button type="submit" class="send">
               Enviar
               <img src="/svg_icons/arrow_upward_white.svg" alt="" />
@@ -1288,6 +1337,7 @@
         <p>Términos del servicio</p>
       </span>
     </footer>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
