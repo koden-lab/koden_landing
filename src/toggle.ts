@@ -11,7 +11,7 @@ export const setupToggle = (idToggle: string, idToggleContainer: string) => {
 
   toggles.forEach((v) => {
     v.addEventListener("click", () => {
-      toggles.forEach((t) => t.classList.remove("selected"));
+      toggles.forEach((t) => (t.dataset.selected = "false"));
       contents.forEach((c) => {
         c.classList.remove("flex");
         c.classList.add("hidden");
@@ -21,7 +21,7 @@ export const setupToggle = (idToggle: string, idToggleContainer: string) => {
       );
       actualContent?.classList.remove("hidden");
       actualContent?.classList.add("flex");
-      v.classList.add("selected");
+      v.dataset.selected = "true";
     });
   });
 };

@@ -21,14 +21,14 @@
       <nav
         class="rounded-2xl divide-x divide-[#737575] bg-deepGray px-5 py-6 flex items-center text-xl font-medium"
       >
-        <a href="#home" class="pr-6 leading-none">Home</a>
-        <a href="#about" class="px-6 leading-none">About</a>
-        <a href="#services" class="px-6 leading-none">Services</a>
-        <a href="" class="px-6 leading-none">Work with us</a>
+        <a href="#home" class="pr-6 leading-none">Inicio</a>
+        <a href="#about" class="px-6 leading-none">Nosotros</a>
+        <a href="#services" class="px-6 leading-none">Servicios</a>
+        <a href="#work" class="px-6 leading-none">Trabaja con nosotros</a>
         <div class="pl-6">
-          <button
+          <a
             type="button"
-            href=""
+            href="#contact"
             class="bg-whiteBG rounded-2xl leading-none text-deepGray px-4 py-3 flex items-center gap-[0.625rem]"
           >
             Contacto
@@ -37,7 +37,7 @@
               alt="Contacto flecha"
               class="size-6"
             />
-          </button>
+          </a>
         </div>
       </nav>
     </header>
@@ -60,7 +60,7 @@
         type="button"
         class="bg-whiteBG text-deepGray text-base py-3 px-4 rounded-2xl font-medium inline-flex items-center gap-[0.625rem] mt-10 z-10 w-auto"
       >
-        Discover more
+        Descubre más
         <img
           src="/svg_icons/arrow_upward_alt.svg"
           alt="Discover more"
@@ -183,22 +183,39 @@
         id="toggle-services"
       >
         <span class="pr-6">
-          <button type="button" class="leading-none selected" value="1">
+          <button
+            data-selected="true"
+            type="button"
+            class="leading-none data-[selected=true]:bg-whiteBG data-[selected=true]:text-deepGray data-[selected=true]:rounded-xl"
+            value="1"
+          >
             Desarrollo
           </button>
         </span>
         <span class="px-6">
-          <button type="button" class="leading-none" value="2">
+          <button
+            type="button"
+            class="leading-none data-[selected=true]:bg-whiteBG data-[selected=true]:text-deepGray data-[selected=true]:rounded-xl"
+            value="2"
+          >
             Marketing digital
           </button>
         </span>
         <span class="px-6">
-          <button type="button" class="leading-none" value="3">
+          <button
+            type="button"
+            class="leading-none data-[selected=true]:bg-whiteBG data-[selected=true]:text-deepGray data-[selected=true]:rounded-xl"
+            value="3"
+          >
             IA/Blockchain
           </button>
         </span>
         <span class="pl-6">
-          <button type="button" class="leading-none" value="4">
+          <button
+            type="button"
+            class="leading-none data-[selected=true]:bg-whiteBG data-[selected=true]:text-deepGray data-[selected=true]:rounded-xl"
+            value="4"
+          >
             ERP y CRM
           </button>
         </span>
@@ -521,7 +538,7 @@
       </div>
     </section>
     <!-- How we work -->
-    <section class="text-whiteBG text-center w-full">
+    <section class="text-whiteBG text-center w-full py-[14.0625rem]" id="work">
       <h2
         class="text-8xl font-bold bg-gradient-to-r from-[#1B5299] to-[12.95%] to-[#9F9FED] bg-clip-text text-transparent leading-normal"
       >
@@ -678,6 +695,537 @@
         </aside>
       </div>
     </section>
+    <!-- FAQS -->
+    <section
+      class="bg-whiteBG flex flex-col w-full items-center pb-[14.06rem]"
+      id="faq-container"
+    >
+      <div class="flex justify-evenly w-full">
+        <nav
+          class="flex items-start flex-col text-deepGray transition-colors"
+          id="faq-triggers"
+        >
+          <span class="pb-20">
+            <h2
+              class="text-[6rem] leading-none pt-[5rem] font-bold bg-gradient-to-r from-[#1B5299] from-[0.52%] to-[#9F9FED] to-[111%] text-transparent bg-clip-text"
+            >
+              FAQS
+            </h2>
+          </span>
+          <button
+            type="button"
+            class="flex gap-[0.9375rem] items-center opacity-50 hover:opacity-75 faq-selected text-xl font-bold data-[selected=true]:opacity-100 transition-opacity"
+            value="1"
+            data-selected="true"
+          >
+            <img
+              src="/svg_icons/faq_1.svg"
+              class="size-12"
+              alt="Desarrollo"
+            />Desarrollo
+          </button>
+          <button
+            type="button"
+            class="flex gap-[0.9375rem] items-center opacity-50 hover:opacity-75 faq-selected text-xl font-bold data-[selected=true]:opacity-100 transition-opacity"
+            value="2"
+          >
+            <img
+              src="/svg_icons/faq_2.svg"
+              class="size-12"
+              alt="Marketing digital"
+            />Marketing digital
+          </button>
+          <button
+            type="button"
+            class="flex gap-[0.9375rem] items-center opacity-50 hover:opacity-75 faq-selected text-xl font-bold data-[selected=true]:opacity-100 transition-opacity"
+            value="3"
+          >
+            <img
+              src="/svg_icons/faq_3.svg"
+              class="size-12"
+              alt="IA/Blockchain"
+            />IA/Blockchain
+          </button>
+          <button
+            type="button"
+            class="flex gap-[0.9375rem] items-center opacity-50 hover:opacity-75 faq-selected text-xl font-bold data-[selected=true]:opacity-100 transition-opacity"
+            value="4"
+          >
+            <img
+              src="/svg_icons/faq_4.svg"
+              class="size-12"
+              alt="ERP y CRM"
+            />ERP y CRM
+          </button>
+        </nav>
+        <div
+          content-toggle="1"
+          class="flex flex-col text-deepGray gap-[2.1875rem] w-[59.25rem] pt-[14.125rem]"
+        >
+          <article>
+            <button
+              id="trigger-devs-1"
+              class="flex w-full text-left border-b pb-[0.9375rem]"
+            >
+              <p
+                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+              >
+                ¿Qué tecnologías utilizan para el desarrollo web y móvil?
+              </p>
+              <p id="indicator-devs-1" class="text-2xl font-bold text-deepGray">
+                +
+              </p>
+            </button>
+            <p
+              class="hidden pt-[0.9375rem] text-deepGray"
+              id="container-devs-1"
+            >
+              Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
+              broccoli marinara meat tomatoes. Peppers parmesan sausage pork
+              meatball ham spinach bbq platter Bianca. Steak burnt beef burnt
+              pan hand stuffed mayo.
+            </p>
+          </article>
+          <article>
+            <button
+              id="trigger-devs-2"
+              class="flex w-full text-left border-b pb-[0.9375rem]"
+            >
+              <p
+                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+              >
+                ¿Cómo garantizan que mi sitio web sea responsivo y rápido?
+              </p>
+              <p id="indicator-devs-2" class="text-2xl font-bold text-deepGray">
+                +
+              </p>
+            </button>
+            <p
+              class="hidden pt-[0.9375rem] text-deepGray"
+              id="container-devs-2"
+            >
+              Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
+              broccoli marinara meat tomatoes. Peppers parmesan sausage pork
+              meatball ham spinach bbq platter Bianca. Steak burnt beef burnt
+              pan hand stuffed mayo.
+            </p>
+          </article>
+          <article>
+            <button
+              id="trigger-devs-3"
+              class="flex w-full text-left border-b pb-[0.9375rem]"
+            >
+              <p
+                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+              >
+                ¿Puedo actualizar mi sitio web por mi cuenta?
+              </p>
+              <p id="indicator-devs-3" class="text-2xl font-bold text-deepGray">
+                +
+              </p>
+            </button>
+
+            <p
+              class="hidden pt-[0.9375rem] text-deepGray"
+              id="container-devs-3"
+            >
+              Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
+              broccoli marinara meat tomatoes. Peppers parmesan sausage pork
+              meatball ham spinach bbq platter Bianca. Steak burnt beef burnt
+              pan hand stuffed mayo.
+            </p>
+          </article>
+          <article>
+            <button
+              id="trigger-devs-4"
+              class="flex w-full text-left border-b pb-[0.9375rem]"
+            >
+              <p
+                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+              >
+                ¿Ofrecen mantenimiento una vez entregado?
+              </p>
+              <p id="indicator-devs-4" class="text-2xl font-bold text-deepGray">
+                +
+              </p>
+            </button>
+            <p
+              class="hidden pt-[0.9375rem] text-deepGray"
+              id="container-devs-4"
+            >
+              Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
+              broccoli marinara meat tomatoes. Peppers parmesan sausage pork
+              meatball ham spinach bbq platter Bianca. Steak burnt beef burnt
+              pan hand stuffed mayo.
+            </p>
+          </article>
+        </div>
+        <div
+          content-toggle="2"
+          class="hidden flex-col text-deepGray gap-[2.1875rem] w-[59.25rem] pt-[14.125rem]"
+        >
+          <article>
+            <button
+              id="trigger-marketing-1"
+              class="flex w-full text-left border-b pb-[0.9375rem]"
+            >
+              <p
+                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+              >
+                ¿Qué plataformas de redes sociales gestionan?
+              </p>
+              <p
+                id="indicator-marketing-1"
+                class="text-2xl font-bold text-deepGray"
+              >
+                +
+              </p>
+            </button>
+            <p
+              class="hidden pt-[0.9375rem] text-deepGray"
+              id="container-marketing-1"
+            >
+              Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
+              broccoli marinara meat tomatoes. Peppers parmesan sausage pork
+              meatball ham spinach bbq platter Bianca. Steak burnt beef burnt
+              pan hand stuffed mayo.
+            </p>
+          </article>
+          <article>
+            <button
+              id="trigger-marketing-2"
+              class="flex w-full text-left border-b pb-[0.9375rem]"
+            >
+              <p
+                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+              >
+                ¿En cuánto tiempo se ven resultados de las campañas
+              </p>
+              <p
+                id="indicator-marketing-2"
+                class="text-2xl font-bold text-deepGray"
+              >
+                +
+              </p>
+            </button>
+            <p
+              class="hidden pt-[0.9375rem] text-deepGray"
+              id="container-marketing-2"
+            >
+              Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
+              broccoli marinara meat tomatoes. Peppers parmesan sausage pork
+              meatball ham spinach bbq platter Bianca. Steak burnt beef burnt
+              pan hand stuffed mayo.
+            </p>
+          </article>
+          <article>
+            <button
+              id="trigger-marketing-3"
+              class="flex w-full text-left border-b pb-[0.9375rem]"
+            >
+              <p
+                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+              >
+                ¿Cómo medimos el éxito de las campañas de marketing?
+              </p>
+              <p
+                id="indicator-marketing-3"
+                class="text-2xl font-bold text-deepGray"
+              >
+                +
+              </p>
+            </button>
+
+            <p
+              class="hidden pt-[0.9375rem] text-deepGray"
+              id="container-marketing-3"
+            >
+              Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
+              broccoli marinara meat tomatoes. Peppers parmesan sausage pork
+              meatball ham spinach bbq platter Bianca. Steak burnt beef burnt
+              pan hand stuffed mayo.
+            </p>
+          </article>
+        </div>
+        <div
+          content-toggle="3"
+          class="hidden flex-col text-deepGray gap-[2.1875rem] w-[59.25rem] pt-[14.125rem]"
+        >
+          <article>
+            <button
+              id="trigger-blockchain-1"
+              class="flex w-full text-left border-b pb-[0.9375rem]"
+            >
+              <p
+                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+              >
+                ¿Qué tecnologías utilizan para el desarrollo web y móvil?
+              </p>
+              <p
+                id="indicator-blockchain-1"
+                class="text-2xl font-bold text-deepGray"
+              >
+                +
+              </p>
+            </button>
+            <p
+              class="hidden pt-[0.9375rem] text-deepGray"
+              id="container-blockchain-1"
+            >
+              Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
+              broccoli marinara meat tomatoes. Peppers parmesan sausage pork
+              meatball ham spinach bbq platter Bianca. Steak burnt beef burnt
+              pan hand stuffed mayo.
+            </p>
+          </article>
+          <article>
+            <button
+              id="trigger-blockchain-2"
+              class="flex w-full text-left border-b pb-[0.9375rem]"
+            >
+              <p
+                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+              >
+                ¿Cómo garantizan que mi sitio web sea responsivo y rápido?
+              </p>
+              <p
+                id="indicator-blockchain-2"
+                class="text-2xl font-bold text-deepGray"
+              >
+                +
+              </p>
+            </button>
+            <p
+              class="hidden pt-[0.9375rem] text-deepGray"
+              id="container-blockchain-2"
+            >
+              Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
+              broccoli marinara meat tomatoes. Peppers parmesan sausage pork
+              meatball ham spinach bbq platter Bianca. Steak burnt beef burnt
+              pan hand stuffed mayo.
+            </p>
+          </article>
+          <article>
+            <button
+              id="trigger-blockchain-3"
+              class="flex w-full text-left border-b pb-[0.9375rem]"
+            >
+              <p
+                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+              >
+                ¿Puedo actualizar mi sitio web por mi cuenta?
+              </p>
+              <p
+                id="indicator-blockchain-3"
+                class="text-2xl font-bold text-deepGray"
+              >
+                +
+              </p>
+            </button>
+
+            <p
+              class="hidden pt-[0.9375rem] text-deepGray"
+              id="container-blockchain-3"
+            >
+              Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
+              broccoli marinara meat tomatoes. Peppers parmesan sausage pork
+              meatball ham spinach bbq platter Bianca. Steak burnt beef burnt
+              pan hand stuffed mayo.
+            </p>
+          </article>
+        </div>
+        <div
+          content-toggle="4"
+          class="hidden flex-col text-deepGray gap-[2.1875rem] w-[59.25rem] pt-[14.125rem]"
+        >
+          <article>
+            <button
+              id="trigger-erpcrm-1"
+              class="flex w-full text-left border-b pb-[0.9375rem]"
+            >
+              <p
+                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+              >
+                ¿Qué tecnologías utilizan para el desarrollo web y móvil?
+              </p>
+              <p
+                id="indicator-erpcrm-1"
+                class="text-2xl font-bold text-deepGray"
+              >
+                +
+              </p>
+            </button>
+            <p
+              class="hidden pt-[0.9375rem] text-deepGray"
+              id="container-erpcrm-1"
+            >
+              Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
+              broccoli marinara meat tomatoes. Peppers parmesan sausage pork
+              meatball ham spinach bbq platter Bianca. Steak burnt beef burnt
+              pan hand stuffed mayo.
+            </p>
+          </article>
+          <article>
+            <button
+              id="trigger-erpcrm-2"
+              class="flex w-full text-left border-b pb-[0.9375rem]"
+            >
+              <p
+                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+              >
+                ¿Cómo garantizan que mi sitio web sea responsivo y rápido?
+              </p>
+              <p
+                id="indicator-erpcrm-2"
+                class="text-2xl font-bold text-deepGray"
+              >
+                +
+              </p>
+            </button>
+            <p
+              class="hidden pt-[0.9375rem] text-deepGray"
+              id="container-erpcrm-2"
+            >
+              Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
+              broccoli marinara meat tomatoes. Peppers parmesan sausage pork
+              meatball ham spinach bbq platter Bianca. Steak burnt beef burnt
+              pan hand stuffed mayo.
+            </p>
+          </article>
+          <article>
+            <button
+              id="trigger-erpcrm-3"
+              class="flex w-full text-left border-b pb-[0.9375rem]"
+            >
+              <p
+                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+              >
+                ¿Puedo actualizar mi sitio web por mi cuenta?
+              </p>
+              <p
+                id="indicator-erpcrm-3"
+                class="text-2xl font-bold text-deepGray"
+              >
+                +
+              </p>
+            </button>
+
+            <p
+              class="hidden pt-[0.9375rem] text-deepGray"
+              id="container-erpcrm-3"
+            >
+              Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
+              broccoli marinara meat tomatoes. Peppers parmesan sausage pork
+              meatball ham spinach bbq platter Bianca. Steak burnt beef burnt
+              pan hand stuffed mayo.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Contacto -->
+    <section
+      class="contact w-full flex flex-col items-center py-[10rem]"
+      id="contact"
+    >
+      <div class="flex gap-6">
+        <div>
+          <h2 class="text-[2.5rem] font-bold pb-[1.875rem]">Escríbenos</h2>
+          <form class="bg-white rounded-xl p-10 flex flex-col items-start">
+            <div class="flex gap-5">
+              <span class="flex flex-col flex-1">
+                <label class="primary" for="nombre">Nombre</label>
+                <input
+                  class="primary"
+                  type="text"
+                  id="nombre"
+                  placeholder="Juan"
+                />
+              </span>
+              <span class="flex flex-col flex-1">
+                <label class="primary" for="apellido">Apellido</label>
+                <input
+                  class="primary"
+                  type="text"
+                  id="apellido"
+                  placeholder="Pérez"
+                />
+              </span>
+            </div>
+            <label class="primary" for="telefono">Número de teléfono</label>
+            <input class="primary" type="tel" id="telefono" />
+            <label class="primary" for="company">Compañía (Opcional) ???</label>
+            <input class="primary" type="tel" id="company" />
+            <label class="primary" for="mensaje">Detalles adicionales</label>
+            <textarea id="mensaje"></textarea>
+            <button type="submit" class="send">
+              Enviar
+              <img src="/svg_icons/arrow_upward_white.svg" alt="" />
+            </button>
+          </form>
+        </div>
+        <div class="w-[30.25rem] pt-[5.25rem]">
+          <h3 class="text-2xl font-bold pb-[1.3125rem]">
+            Otras formas de contacto
+          </h3>
+          <p class="text-base font-medium text-white">
+            Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
+            broccoli marinara meat tomatoes pizza broccoli marinara meat
+            tomatoes.
+          </p>
+          <form
+            class="bg-white rounded-xl px-10 py-[1.5625rem] flex flex-col items-start mt-[1.625rem]"
+          >
+            <label class="secondary" for="email">Correo electrónico</label>
+            <input class="secondary" type="email" id="email" />
+            <label class="secondary" for="tel2">Teléfono</label>
+            <input class="secondary" type="tel" id="tel2" />
+            <label class="secondary" for="help">Ayuda y soporte</label>
+            <input class="secondary" type="text" id="help" />
+            <button type="submit" class="send">
+              Enviar
+              <img src="/svg_icons/arrow_upward_white.svg" alt="" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="py-[5.625rem] text-center flex items-center flex-col gap-10">
+      <div class="space-y-[1.5625rem]">
+        <h2 class="text-[3rem] font-bold">Comencemos tu viaje al éxito</h2>
+        <p class="font-medium">
+          Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
+          broccoli marinara meat tomatoes pizza broccoli marinara meat tomatoes.
+        </p>
+      </div>
+      <img src="/svg/logo_name.svg" alt="Koden" class="w-[5.375rem]" />
+      <nav
+        class="rounded-2xl divide-x divide-[#737575] bg-deepGray px-5 py-6 flex items-center text-xl font-medium"
+      >
+        <a href="#home" class="pr-6 leading-none">Inicio</a>
+        <a href="#about" class="px-6 leading-none">Nosotros</a>
+        <a href="#services" class="px-6 leading-none">Servicios</a>
+        <a href="#" class="px-6 leading-none">Trabaja con nosotros</a>
+        <div class="pl-6">
+          <a
+            type="button"
+            href="#contact"
+            class="bg-whiteBG rounded-2xl leading-none text-deepGray px-4 py-3 flex items-center gap-[0.625rem]"
+          >
+            Contacto
+            <img
+              src="/svg_icons/arrow_outward.svg"
+              alt="Contacto flecha"
+              class="size-6"
+            />
+          </a>
+        </div>
+      </nav>
+      <span class="flex gap-[1.0625rem] text-base">
+        <p>Política de privacidad</p>
+        <p>Términos del servicio</p>
+      </span>
+    </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
