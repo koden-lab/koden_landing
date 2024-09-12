@@ -591,27 +591,27 @@
     </section>
     <!-- How we work -->
     <section
-      class="text-whiteBG text-center w-full py-[14.0625rem] relative"
+      class="text-whiteBG text-center w-full pt-[28.0625rem] pb-[14.0625rem] relative"
       id="work"
     >
       <img
         src="/svg/crystal.svg"
-        class="absolute top-0 left-40 size-[20.5rem]"
+        class="absolute top-44 left-40 size-[20.5rem]"
         alt=""
       />
       <img
         src="/svg/crystal2.svg"
-        class="absolute top-[20rem] right-[8rem] size-[17.25rem]"
+        class="absolute top-[35rem] right-[8rem] size-[17.25rem]"
         alt=""
       />
       <img
         src="/svg/code.svg"
-        class="absolute top-[12rem] right-[7.5rem] w-[6.8125rem] h-[5.25rem]"
+        class="absolute top-[28rem] right-[7.5rem] w-[6.8125rem] h-[5.25rem]"
         alt=""
       />
       <img
         src="/svg/code2.svg"
-        class="absolute top-[30rem] left-[10rem] w-[6.39419rem] h-[4.83238rem]"
+        class="absolute top-[45rem] left-[10rem] w-[6.39419rem] h-[4.83238rem]"
         alt=""
       />
       <h2
@@ -622,20 +622,22 @@
       <p class="text-xl font-light">
         Conoce nuestro paso a paso para construir soluciones avanzadas
       </p>
-      <button
+      <a
         type="button"
+        href="#stages"
         class="bg-whiteBG text-deepGray text-base py-3 px-4 rounded-2xl font-medium inline-flex items-center gap-[0.625rem] mt-10 z-10 w-auto"
       >
-        Descubre más
+        Ver más
         <img
           src="/svg_icons/arrow_upward_alt.svg"
           alt="Discover more"
           class="size-6"
         />
-      </button>
+      </a>
       <div class="flex items-start justify-between w-full pt-64">
         <div
           class="text-left flex flex-col items-center justify-center pl-[8.375rem]"
+          id="stages"
         >
           <article class="flex gap-40 pt-12">
             <div class="flex gap-10">
@@ -1254,11 +1256,17 @@
               </span>
             </div>
             <label class="primary" for="telefono">Número de teléfono</label>
-            <input class="primary" type="tel" id="telefono" name="telefono" />
+            <input
+              class="primary"
+              type="tel"
+              id="telefono"
+              name="telefono"
+              required
+            />
             <label class="primary" for="company">Compañía (Opcional)</label>
             <input class="primary" type="tel" id="company" name="company" />
             <label class="primary" for="detalles">Detalles adicionales</label>
-            <textarea id="detalles" name="detalles"></textarea>
+            <textarea id="detalles" name="detalles" required></textarea>
             <button type="submit" class="send">
               Enviar
               <img src="/svg_icons/arrow_upward_white.svg" alt="" />
@@ -1280,11 +1288,29 @@
             onsubmit="handleFormSubmit(event)"
           >
             <label class="secondary" for="email">Correo electrónico</label>
-            <input class="secondary" type="email" id="email" name="email" />
+            <input
+              class="secondary"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
             <label class="secondary" for="tel2">Teléfono</label>
-            <input class="secondary" type="tel" id="tel2" name="telefono" />
+            <input
+              class="secondary"
+              type="tel"
+              id="tel2"
+              name="telefono"
+              required
+            />
             <label class="secondary" for="help">Ayuda y soporte</label>
-            <input class="secondary" type="text" id="help" name="help" />
+            <input
+              class="secondary"
+              type="text"
+              id="help"
+              name="help"
+              required
+            />
             <button type="submit" class="send">
               Enviar
               <img src="/svg_icons/arrow_upward_white.svg" alt="" />
