@@ -1,9 +1,1 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-    xmlns="http://www.w3.org/2000/svg">
-    <mask id="mask0_21_468" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
-        <rect width="48" height="48" fill="#D9D9D9"/>
-    </mask>
-    <g mask="url(#mask0_21_468)">
-        <path d="M10 42C8.9 42 7.95833 41.6083 7.175 40.825C6.39167 40.0417 6 39.1 6 38V10C6 8.9 6.39167 7.95833 7.175 7.175C7.95833 6.39167 8.9 6 10 6H38C39.1 6 40.0417 6.39167 40.825 7.175C41.6083 7.95833 42 8.9 42 10V38C42 39.1 41.6083 40.0417 40.825 40.825C40.0417 41.6083 39.1 42 38 42H10ZM38 14.5L25.9 28.1L18 20.2L10 28.2V33.9L18 25.9L26.1 34L38 20.5V14.5Z" fill="#FAFAF5"/>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"><mask id="a" width="48" height="48" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#D9D9D9" d="M0 0h48v48H0z"/></mask><g mask="url(#a)"><path fill="#FAFAF5" d="M10 42q-1.65 0-2.825-1.175T6 38V10q0-1.65 1.175-2.825T10 6h28q1.65 0 2.825 1.175T42 10v28q0 1.65-1.175 2.825T38 42zm28-27.5L25.9 28.1 18 20.2l-8 8v5.7l8-8 8.1 8.1L38 20.5z"/></g></svg>
