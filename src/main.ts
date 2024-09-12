@@ -13,7 +13,7 @@ setupCollapsable("trigger-stage-3", "container-stage-3", "indicator-stage-3");
 setupCollapsable("trigger-devs-1", "container-devs-1", "indicator-devs-1");
 setupCollapsable("trigger-devs-2", "container-devs-2", "indicator-devs-2");
 setupCollapsable("trigger-devs-3", "container-devs-3", "indicator-devs-3");
-setupCollapsable("trigger-devs-4", "container-devs-3", "indicator-devs-3");
+setupCollapsable("trigger-devs-4", "container-devs-4", "indicator-devs-4");
 //Marketing
 setupCollapsable(
   "trigger-marketing-1",

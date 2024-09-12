@@ -15,12 +15,10 @@
       async function handleFormSubmit(event) {
         event.preventDefault();
 
-        contact_number = event.currentTarget.id === "form2" ? "2" : "";
-
         const formData = new FormData(event.target);
 
         try {
-          const response = await fetch(`/api/contact${contact_number}`, {
+          const response = await fetch(`/api/contact`, {
             method: "POST",
             body: formData,
           });
@@ -671,7 +669,10 @@
                   <p class="grow text-xl font-bold">Más sobre esta etapa</p>
                   <p id="indicator-stage-1" class="text-xl font-bold">+</p>
                 </button>
-                <p class="hidden pt-[0.9375rem]" id="container-stage-1">
+                <p
+                  class="invisible max-h-0 transition-all pt-[0.9375rem]"
+                  id="container-stage-1"
+                >
                   Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
                   broccoli marinara meat tomatoes. Peppers parmesan sausage pork
                   meatball ham spinach bbq platter Bianca. Steak burnt beef
@@ -711,7 +712,10 @@
                   <p class="grow text-xl font-bold">Más sobre esta etapa</p>
                   <p id="indicator-stage-2" class="text-xl font-bold">+</p>
                 </button>
-                <p class="hidden pt-[0.9375rem]" id="container-stage-2">
+                <p
+                  class="invisible max-h-0 transition-all pt-[0.9375rem]"
+                  id="container-stage-2"
+                >
                   Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
                   broccoli marinara meat tomatoes. Peppers parmesan sausage pork
                   meatball ham spinach bbq platter Bianca. Steak burnt beef
@@ -752,7 +756,10 @@
                   <p class="grow text-xl font-bold">Más sobre esta etapa</p>
                   <p id="indicator-stage-3" class="text-xl font-bold">+</p>
                 </button>
-                <p class="hidden pt-[0.9375rem]" id="container-stage-3">
+                <p
+                  class="invisible max-h-0 transition-all pt-[0.9375rem]"
+                  id="container-stage-3"
+                >
                   Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
                   broccoli marinara meat tomatoes. Peppers parmesan sausage pork
                   meatball ham spinach bbq platter Bianca. Steak burnt beef
@@ -865,7 +872,7 @@
               </p>
             </button>
             <p
-              class="hidden pt-[0.9375rem] text-deepGray"
+              class="invisible max-h-0 transition-all pt-[0.9375rem] text-deepGray"
               id="container-devs-1"
             >
               Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
@@ -889,7 +896,7 @@
               </p>
             </button>
             <p
-              class="hidden pt-[0.9375rem] text-deepGray"
+              class="invisible max-h-0 transition-all pt-[0.9375rem] text-deepGray"
               id="container-devs-2"
             >
               Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
@@ -914,7 +921,7 @@
             </button>
 
             <p
-              class="hidden pt-[0.9375rem] text-deepGray"
+              class="invisible max-h-0 transition-all pt-[0.9375rem] text-deepGray"
               id="container-devs-3"
             >
               Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
@@ -938,7 +945,7 @@
               </p>
             </button>
             <p
-              class="hidden pt-[0.9375rem] text-deepGray"
+              class="invisible max-h-0 transition-all pt-[0.9375rem] text-deepGray"
               id="container-devs-4"
             >
               Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
@@ -1263,6 +1270,14 @@
               name="telefono"
               required
             />
+            <label class="primary" for="telefono">Correo electrónico</label>
+            <input
+              class="primary"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
             <label class="primary" for="company">Compañía (Opcional)</label>
             <input class="primary" type="tel" id="company" name="company" />
             <label class="primary" for="detalles">Detalles adicionales</label>
@@ -1278,9 +1293,8 @@
             Otras formas de contacto
           </h3>
           <p class="text-base font-medium text-white">
-            Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
-            broccoli marinara meat tomatoes pizza broccoli marinara meat
-            tomatoes.
+            Puedes enviarnos un mensaje directo con cualquier consulta o idea
+            que tengas, y nuestro equipo te responderá lo antes posible
           </p>
           <form
             class="bg-white rounded-xl px-10 py-[1.5625rem] flex flex-col items-start mt-[1.625rem]"

@@ -12,8 +12,14 @@ export const setupCollapsable = (
   let active = false;
 
   trigger.addEventListener("click", () => {
-    content.classList.remove(active ? "flex" : "hidden");
-    content.classList.add(active ? "hidden" : "flex");
+    content.classList.remove(active ? "visible" : "invisible");
+    content.classList.remove(active ? "opacity-100" : "opacity-0");
+    content.classList.remove(active ? "max-h-[100px]" : "max-h-0");
+    content.classList.add(active ? "invisible" : "visible");
+    content.classList.add(active ? "opacity-0" : "opacity-100");
+    content.classList.add(active ? "max-h-0" : "max-h-[100px]");
+
+    console.log("active", active);
 
     active = !active;
 
