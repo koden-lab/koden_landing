@@ -47,7 +47,6 @@
   <body
     class="flex flex-col justify-center items-center mt-[3.625rem] font-satoshi relative"
   >
-    <script type="module" src="/src/toggle.ts"></script>
     <div
       id="toaster"
       class="fixed -top-40 z-50 bg-[#1A1A1A]/50 backdrop-blur-md rounded-lg px-[1.5rem] py-[1rem] text-xl transition-all"
@@ -58,7 +57,8 @@
     <header class="flex items-center gap-5">
       <img src="/svg/logo_name.svg" alt="Koden" class="w-[5.375rem]" />
       <nav
-        class="rounded-2xl divide-x divide-[#737575] bg-deepGray px-5 py-6 flex items-center text-xl font-medium"
+        id="main-navbar"
+        class="rounded-2xl divide-x divide-[#737575] bg-deepGray px-5 py-6 flex items-center text-xl font-medium transition-opacity duration-500"
       >
         <a href="#home" class="pr-6 leading-none">Inicio</a>
         <a href="#about" class="px-6 leading-none">Nosotros</a>
@@ -87,12 +87,12 @@
     >
       <img
         src="/img/shape_hero_1.png"
-        class="absolute bottom-[4rem] left-[8rem] size-[8.75rem] z-10"
+        class="absolute bottom-[4rem] left-[8rem] size-[8.75rem] z-10 floating"
         alt=""
       />
       <img
         src="/img/shape_hero_2.png"
-        class="absolute bottom-[20rem] right-[8rem] size-[6.75rem] z-10"
+        class="absolute bottom-[20rem] right-[8rem] size-[6.75rem] z-10 floating"
         alt=""
       />
       <div
@@ -593,12 +593,12 @@
     >
       <img
         src="/img/crystal.png"
-        class="absolute top-44 left-40 size-[20.5rem]"
+        class="absolute top-44 left-40 size-[20.5rem] floating"
         alt=""
       />
       <img
         src="/img/crystal2.png"
-        class="absolute top-[35rem] right-[8rem] size-[17.25rem]"
+        class="absolute top-[35rem] right-[8rem] size-[17.25rem] floating"
         alt=""
       />
       <img

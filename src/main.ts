@@ -1,6 +1,7 @@
 import { setupCollapsable } from "./collapsable";
 import "./style.css";
 import { setupToggle } from "./toggle";
+import { animateNavbar } from "./animations/navbar";
 
 setupToggle("toggle-services", "toggle-services-container");
 setupToggle("faq-triggers", "faq-container");
@@ -62,3 +63,6 @@ setupCollapsable(
   "container-erpcrpm-3",
   "indicator-erpcrpm-3"
 );
+
+//ANIMATIONS
+animateNavbar();
