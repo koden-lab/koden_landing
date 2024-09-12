@@ -1285,36 +1285,43 @@
           <form
             class="bg-white rounded-xl px-10 py-[1.5625rem] flex flex-col items-start mt-[1.625rem]"
             id="form2"
-            onsubmit="handleFormSubmit(event)"
           >
             <label class="secondary" for="email">Correo electrónico</label>
-            <input
-              class="secondary"
-              type="email"
-              id="email"
-              name="email"
-              required
-            />
-            <label class="secondary" for="tel2">Teléfono</label>
-            <input
-              class="secondary"
-              type="tel"
-              id="tel2"
-              name="telefono"
-              required
-            />
+            <div class="contact">
+              <a
+                class="contact"
+                href="mailto:info@koden.io"
+                id="email"
+                name="email"
+                value="info@koden.io"
+              >
+                info@koden.io
+              </a>
+            </div>
+            <label class="secondary" for="tel2">WhatsApp</label>
+            <div class="contact">
+              <a
+                class="contact"
+                type="tel"
+                id="tel2"
+                name="telefono"
+                href="https://wa.me/525573366134"
+              >
+                +(52) 55 7336 6134
+              </a>
+            </div>
             <label class="secondary" for="help">Ayuda y soporte</label>
-            <input
-              class="secondary"
-              type="text"
-              id="help"
-              name="help"
-              required
-            />
-            <button type="submit" class="send">
-              Enviar
-              <img src="/svg_icons/arrow_upward_white.svg" alt="" />
-            </button>
+            <div class="contact">
+              <a
+                class="contact"
+                type="text"
+                id="help"
+                name="help"
+                href="mailto:soporte@koden.io"
+              >
+                soporte@koden.io
+              </a>
+            </div>
           </form>
         </div>
       </div>

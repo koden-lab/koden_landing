@@ -87,8 +87,11 @@
   label.primary {
     @apply text-black text-base font-medium pb-[0.5625rem] pt-[1rem];
   }
-  input.secondary {
+  div.contact {
     @apply py-[0.9375rem] text-deepGray placeholder-[#818181] text-sm font-medium bg-transparent border-b border-b-[#1A1A1A] leading-normal w-full;
+  }
+  a.contact {
+    @apply hover:text-deepGray/80 transition-colors;
   }
   label.secondary {
     @apply text-[#8D8D8D] text-base font-medium  pt-[1rem];
