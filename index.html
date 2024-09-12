@@ -18,14 +18,13 @@
         const formData = new FormData(event.target);
 
         try {
-          const response = await fetch(`/api/contact`, {
+          const response = await fetch(`http://localhost:1020/api/contact`, {
             method: "POST",
             body: formData,
           });
 
           if (response.ok) {
             const result = await response.json();
-            if (!result) return console.error("No se pudo enviar");
 
             const toaster = document.querySelector("#toaster");
             toaster.classList.remove("-top-40");
@@ -36,7 +35,7 @@
               toaster.classList.add("-top-40");
             }, 5000);
 
-            // event.target.reset();
+            event.target.reset();
           } else {
           }
         } catch (error) {
