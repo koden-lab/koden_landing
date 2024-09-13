@@ -1,23 +1,23 @@
-export const animateNavbar = () => {
-  const navbar = document.querySelector("#main-navbar");
-  const logo = document.querySelector("#koden-logo");
+// export const animateNavbar = () => {
+//   const navbar = document.querySelector("#main-navbar");
+//   const logo = document.querySelector("#koden-logo");
 
-  if (!navbar || !logo) return;
+//   if (!navbar || !logo) return;
 
-  let isScrolling: number;
+//   let isScrolling: number;
 
-  window.addEventListener("scroll", () => {
-    navbar.classList.add("opacity-0");
-    logo.classList.add("opacity-0");
+//   window.addEventListener("scroll", () => {
+//     navbar.classList.add("opacity-0");
+//     logo.classList.add("opacity-0");
 
-    window.clearTimeout(isScrolling);
+//     window.clearTimeout(isScrolling);
 
-    isScrolling = setTimeout(() => {
-      navbar.classList.remove("opacity-0");
-      logo.classList.remove("opacity-0");
-    }, 150);
-  });
-};
+//     isScrolling = setTimeout(() => {
+//       navbar.classList.remove("opacity-0");
+//       logo.classList.remove("opacity-0");
+//     }, 150);
+//   });
+// };
 
 export const handleFixedNav = () => {
   const navbar = document.querySelector("#main-navbar");
