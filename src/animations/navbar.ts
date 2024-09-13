@@ -1,21 +1,37 @@
 export const animateNavbar = () => {
   const navbar = document.querySelector("#main-navbar");
-  const logo = document.querySelector("#koden-logo");
 
-  if (!navbar || !logo) return;
+  if (!navbar) return;
 
   let isScrolling: number;
+  let hideTimeout: number;
 
-  window.addEventListener("scroll", () => {
-    navbar.classList.remove("opacity-0");
-
-    window.clearTimeout(isScrolling);
-
-    isScrolling = setTimeout(() => {
-      if (window.scrollY !== 0) {
+  const hideNavbar = () => {
+    hideTimeout = setTimeout(() => {
+      if (window.scrollY !== 0 && !navbar.matches(":hover")) {
         navbar.classList.add("opacity-0");
       }
     }, 2500);
+  };
+
+  window.addEventListener("scroll", () => {
+    navbar.classList.remove("opacity-0");
+    window.clearTimeout(isScrolling);
+    window.clearTimeout(hideTimeout);
+    isScrolling = setTimeout(() => {
+      hideNavbar();
+    }, 250);
+  });
+
+  navbar.addEventListener("mouseleave", () => {
+    if (window.scrollY !== 0) {
+      window.clearTimeout(hideTimeout);
+      hideNavbar();
+    }
+  });
+
+  navbar.addEventListener("mouseenter", () => {
+    window.clearTimeout(hideTimeout);
   });
 };
 
