@@ -54,11 +54,13 @@
       Pronto nos contactaremos contigo.
     </div>
     <!-- HEADER -->
-    <header class="flex items-center gap-5">
+    <header
+      class="fixed top-[3.625rem] flex items-center gap-5 z-50 transition-opacity duration-300 ease-in-out"
+    >
       <img src="/svg/logo_name.svg" alt="Koden" class="w-[5.375rem]" />
       <nav
         id="main-navbar"
-        class="rounded-2xl divide-x divide-[#737575] bg-deepGray px-5 py-6 flex items-center text-xl font-medium transition-opacity duration-500"
+        class="rounded-2xl divide-x divide-[#737575] bg-deepGray px-5 py-6 flex items-center text-xl font-medium"
       >
         <a href="#home" class="pr-6 leading-none">Inicio</a>
         <a href="#about" class="px-6 leading-none">Nosotros</a>
@@ -83,7 +85,7 @@
     <!-- HERO -->
     <main
       id="home"
-      class="relative flex flex-col items-center text-center bg-gradient-to-r from-[#1B5299]/80 via-50% via-[#7B9BC4]/80 to-[#6F6FA6]/80 rounded-2xl backdrop-blur-3xl pt-10 px-32 sm:w-[85rem] 2xl:w-[105.4375rem]"
+      class="mt-24 relative flex flex-col items-center text-center bg-gradient-to-r from-[#1B5299]/80 via-50% via-[#7B9BC4]/80 to-[#6F6FA6]/80 rounded-2xl backdrop-blur-3xl pt-10 px-32 sm:w-[85rem] 2xl:w-[105.4375rem] animate-hero transition-opacity duration-1000"
     >
       <img
         src="/img/shape_hero_1.png"
@@ -96,7 +98,7 @@
         alt=""
       />
       <div
-        class="absolute top-0 bg-gradient-to-b from-[#0e1111] via-[#0e1111] via-[70%] to- w-full h-full"
+        class="absolute top-0 bg-gradient-to-b from-[#0e1111] via-[#0e1111] via-[70%] to- w-full h-full animate-hero"
       ></div>
       <h1 class="text-[4rem] font-bold relative z-10">
         Soluciones a la medida
@@ -116,7 +118,7 @@
           class="size-6"
         />
       </button>
-      <div class="flex relative pt-32 items-start">
+      <div class="flex relative pt-32 items-start animate-hero">
         <p
           class="text-[8rem] w-full font-bold pt-16 mr-8 bg-gradient-to-r from-[#1B5299] to-[12.95%] to-[#9F9FED] text-transparent bg-clip-text"
         >

@@ -1,20 +1,17 @@
 export const animateNavbar = () => {
-  const navbar = document.querySelector("#main-navbar");
+  const navbar = document.querySelector("header");
 
   if (!navbar) return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navbar.classList.remove("opacity-0");
-        } else {
-          navbar.classList.add("opacity-0");
-        }
-      });
-    },
-    { threshold: [1] }
-  );
+  let isScrolling: number;
 
-  observer.observe(navbar);
+  window.addEventListener("scroll", () => {
+    navbar.classList.add("opacity-0");
+
+    window.clearTimeout(isScrolling);
+
+    isScrolling = setTimeout(() => {
+      navbar.classList.remove("opacity-0");
+    }, 150);
+  });
 };
