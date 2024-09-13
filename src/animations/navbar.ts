@@ -1,40 +1,40 @@
-// export const animateNavbar = () => {
-//   const navbar = document.querySelector("#main-navbar");
-//   const logo = document.querySelector("#koden-logo");
+export const animateNavbar = () => {
+  const navbar = document.querySelector("#main-navbar");
+  const logo = document.querySelector("#koden-logo");
 
-//   if (!navbar || !logo) return;
+  if (!navbar || !logo) return;
 
-//   let isScrolling: number;
+  let isScrolling: number;
 
-//   window.addEventListener("scroll", () => {
-//     navbar.classList.add("opacity-0");
-//     logo.classList.add("opacity-0");
+  window.addEventListener("scroll", () => {
+    navbar.classList.remove("opacity-0");
 
-//     window.clearTimeout(isScrolling);
+    window.clearTimeout(isScrolling);
 
-//     isScrolling = setTimeout(() => {
-//       navbar.classList.remove("opacity-0");
-//       logo.classList.remove("opacity-0");
-//     }, 150);
-//   });
-// };
+    isScrolling = setTimeout(() => {
+      navbar.classList.add("opacity-0");
+    }, 2500);
+  });
+};
 
 export const handleFixedNav = () => {
   const navbar = document.querySelector("#main-navbar");
-  if (!navbar) return;
+  const logo = document.querySelector("#koden-logo");
+  if (!navbar || !logo) return;
 
-  let isScrolling: number;
   // Escuchar el evento de scroll
   window.addEventListener("scroll", () => {
-    window.clearTimeout(isScrolling);
     if (window.scrollY !== 0) {
-      isScrolling = setTimeout(() => {
-        navbar.classList.remove("bg-deepGray");
-        navbar.classList.add("bg-deepGray/50");
-      }, 150);
+      navbar.classList.remove("bg-deepGray");
+      navbar.classList.add("bg-deepGray/50");
+      navbar.classList.add("translate-x-[-3.25rem]");
+      logo.classList.add("opacity-0");
     } else {
       navbar.classList.remove("bg-deepGray/50");
       navbar.classList.add("bg-deepGray");
+      navbar.classList.remove("opacity-0");
+      navbar.classList.remove("translate-x-[-3.25rem]");
+      logo.classList.remove("opacity-0");
     }
   });
 };

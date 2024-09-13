@@ -19,8 +19,6 @@ export const setupCollapsable = (
     content.classList.add(active ? "opacity-0" : "opacity-100");
     content.classList.add(active ? "max-h-0" : "max-h-[100px]");
 
-    console.log("active", active);
-
     active = !active;
 
     if (!indicator) return;

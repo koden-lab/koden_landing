@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/svg/logo.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -43,6 +47,10 @@
         }
       }
     </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body
     class="flex flex-col justify-center items-center mt-[3.625rem] font-satoshi relative"
@@ -54,16 +62,18 @@
       Pronto nos contactaremos contigo.
     </div>
     <!-- HEADER -->
-    <header class="fixed top-[3.625rem] flex items-center gap-5 z-50">
+    <header
+      class="fixed top-[3.625rem] flex items-center gap-5 z-50 animate__bounce"
+    >
       <img
         src="/svg/logo_name.svg"
         alt="Koden"
-        class="w-[5.375rem] transition-opacity duration-300 ease-in-out"
+        class="w-[5.375rem] transition-opacity duration-[850ms] ease-in-out opacity-0"
         id="koden-logo"
       />
       <nav
         id="main-navbar"
-        class="rounded-2xl divide-x divide-[#737575] backdrop-blur-md bg-deepGray px-5 py-6 flex items-center text-xl font-medium transition-all duration-300 ease-in-out"
+        class="rounded-2xl divide-x divide-[#737575] backdrop-blur-md bg-deepGray px-5 py-6 flex items-center text-xl font-medium transition-all ease-in-out duration-700"
       >
         <a
           href="#"
@@ -115,8 +125,9 @@
         Transformamos tus ideas en herramientas digitales que impulsan tu
         negocio.
       </p>
-      <button
+      <a
         type="button"
+        href="#about"
         class="bg-whiteBG text-deepGray text-base py-3 px-4 rounded-2xl font-medium inline-flex items-center gap-[0.625rem] mt-10 z-10 w-auto"
       >
         Descubre más
@@ -125,7 +136,7 @@
           alt="Discover more"
           class="size-6"
         />
-      </button>
+      </a>
       <div class="flex relative pt-32 items-start animate-hero">
         <p
           class="text-[8rem] w-full font-bold pt-16 mr-8 bg-gradient-to-r from-[#1B5299] to-[12.95%] to-[#9F9FED] text-transparent bg-clip-text"
@@ -202,7 +213,7 @@
             src="/svg/image1.svg"
             alt=""
             srcset=""
-            class="sm:size-[87.5%] 2xl:size-full"
+            class="sm:size-[87.5%] 2xl:size-full scroll-fade"
           />
         </aside>
       </div>
@@ -649,7 +660,7 @@
           <article class="flex gap-40 pt-12">
             <div class="flex gap-10">
               <div class="flex flex-col shrink-0 items-center">
-                <span>
+                <span class="aspect-square">
                   <img
                     src="/svg/number_1.svg"
                     alt="3"
@@ -693,7 +704,7 @@
           <article class="flex gap-40 pt-12">
             <div class="flex gap-10">
               <div class="flex flex-col shrink-0 items-center">
-                <span>
+                <span class="aspect-square">
                   <img
                     src="/svg/number_2.svg"
                     alt="2"
@@ -736,7 +747,7 @@
           <article class="flex gap-64 pt-12">
             <div class="flex gap-10">
               <div class="flex flex-col shrink-0 items-center">
-                <span>
+                <span class="aspect-square">
                   <img
                     src="/svg/number_3.svg"
                     alt="3"

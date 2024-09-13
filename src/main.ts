@@ -1,8 +1,8 @@
-import { setupCollapsable } from "./collapsable";
+import { setupCollapsable } from "./components/collapsable";
 import "./style.css";
-import { setupToggle } from "./toggle";
-import { handleFixedNav } from "./animations/navbar";
-import { animateHero } from "./animations/hero";
+import { setupToggle } from "./components/toggle";
+import { animateNavbar, handleFixedNav } from "./animations/navbar";
+import { scrollOpacity } from "./animations/scroll_opacity";
 
 setupToggle("toggle-services", "toggle-services-container");
 setupToggle("faq-triggers", "faq-container");
@@ -67,5 +67,7 @@ setupCollapsable(
 
 //ANIMATIONS
 
-animateHero();
+scrollOpacity("main");
+scrollOpacity(".scroll-fade");
 handleFixedNav();
+animateNavbar();
