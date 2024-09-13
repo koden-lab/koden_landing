@@ -12,7 +12,9 @@ export const animateNavbar = () => {
     window.clearTimeout(isScrolling);
 
     isScrolling = setTimeout(() => {
-      navbar.classList.add("opacity-0");
+      if (window.scrollY !== 0) {
+        navbar.classList.add("opacity-0");
+      }
     }, 2500);
   });
 };
