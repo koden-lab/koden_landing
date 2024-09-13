@@ -1,7 +1,7 @@
 import { setupCollapsable } from "./collapsable";
 import "./style.css";
 import { setupToggle } from "./toggle";
-import { animateNavbar } from "./animations/navbar";
+import { animateNavbar, handleFixedNav } from "./animations/navbar";
 import { animateHero } from "./animations/hero";
 
 setupToggle("toggle-services", "toggle-services-container");
@@ -68,3 +68,4 @@ setupCollapsable(
 //ANIMATIONS
 animateNavbar();
 animateHero();
+handleFixedNav();
