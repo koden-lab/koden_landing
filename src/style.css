@@ -6,6 +6,7 @@
   background-color: #0e1111;
   color: white;
   scroll-behavior: smooth;
+
   @apply text-base md:text-sm lg:text-sm xl:text-sm 2xl:text-base;
 }
 
@@ -123,5 +124,11 @@
 
   .scroll-fade {
     @apply transition-opacity duration-500;
+  }
+  .body-fade-out {
+    @apply -translate-x-full transition-transform duration-[350ms] ease-linear overflow-x-hidden;
+  }
+  .body-fade-out-2 {
+    @apply translate-x-full transition-transform duration-[350ms] ease-linear overflow-x-hidden;
   }
 }

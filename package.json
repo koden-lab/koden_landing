@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "transition-style": "^0.1.3"
   }
 }

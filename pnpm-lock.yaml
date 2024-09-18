@@ -14,6 +14,9 @@ importers:
       path:
         specifier: ^0.12.7
         version: 0.12.7
+      transition-style:
+        specifier: ^0.1.3
+        version: 0.1.3
     devDependencies:
       autoprefixer:
         specifier: ^10.4.20
@@ -842,6 +845,9 @@ packages:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
 
+  transition-style@0.1.3:
+    resolution: {integrity: sha512-VlwsFMhxS0YOHlWY8jf2ofZC/rvnOtoC51YU8qhu8GA2WwB6EXZonxpw/bZOD6+s7vUwFDwTSwVlvk9nMhX1NQ==}
+
   trim-repeated@1.0.0:
     resolution: {integrity: sha512-pkonvlKk8/ZuR0D5tLW8ljt5I8kmxp2XKymhepUeOdCEfKpZaktSArkLHZt76OB1ZvO9bssUsDty4SWhLvZpLg==}
     engines: {node: '>=0.10.0'}
@@ -1651,6 +1657,8 @@ snapshots:
   to-regex-range@5.0.1:
     dependencies:
       is-number: 7.0.0
+
+  transition-style@0.1.3: {}
 
   trim-repeated@1.0.0:
     dependencies:

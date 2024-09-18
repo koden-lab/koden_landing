@@ -3,6 +3,10 @@ import "./style.css";
 import { setupToggle } from "./components/toggle";
 import { animateNavbar, handleFixedNav } from "./animations/navbar";
 import { scrollOpacity } from "./animations/scroll_opacity";
+import { setupBackButtonsSlide } from "./animations/back_button";
+import { setupServicesTransition } from "./animations/transition_lefting";
+import { setupServicesDetailTransition } from "./animations/transition_lefting_details";
+import { setupServices } from "./animations/services";
 
 const urlParams = new URLSearchParams(window.location.search);
 const initialContentServices = urlParams.get("services");
@@ -12,13 +16,7 @@ setupToggle(
   "toggle-services-container",
   initialContentServices
 );
-if (initialContentServices) {
-  const element = document.querySelector(
-    `[content-toggle=${initialContentServices}]`
-  );
-
-  element?.scrollIntoView({ block: "end" });
-}
+setupServices();
 setupToggle("faq-triggers", "faq-container");
 //Etapas
 setupCollapsable("trigger-stage-1", "container-stage-1", "indicator-stage-1");
@@ -85,3 +83,6 @@ scrollOpacity("main");
 scrollOpacity(".scroll-fade");
 handleFixedNav();
 animateNavbar();
+setupBackButtonsSlide();
+setupServicesTransition();
+setupServicesDetailTransition();
