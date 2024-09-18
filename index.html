@@ -257,7 +257,7 @@
             data-selected="true"
             type="button"
             class="leading-none data-[selected=true]:bg-whiteBG data-[selected=true]:text-deepGray data-[selected=true]:rounded-xl"
-            value="1"
+            value="development"
           >
             Desarrollo
           </button>
@@ -266,7 +266,7 @@
           <button
             type="button"
             class="leading-none data-[selected=true]:bg-whiteBG data-[selected=true]:text-deepGray data-[selected=true]:rounded-xl"
-            value="2"
+            value="marketing"
           >
             Marketing digital
           </button>
@@ -291,7 +291,7 @@
         </span>
       </nav>
       <!-- Content 1 -->
-      <div class="gap-36 pt-[5.625rem] flex" content-toggle="1">
+      <div class="gap-36 pt-[5.625rem] flex" content-toggle="development">
         <div class="w-[48rem]">
           <article class="space-y-10">
             <h2 class="">Poderosas soluciones de software</h2>
@@ -349,9 +349,10 @@
                 </p>
               </div>
             </article>
-            <button
+            <a
               type="button"
-              class="bg-whiteBG text-deepGray text-base font-medium rounded-2xl space-x-2.5 flex py-3 px-4 items-center"
+              href="services/development"
+              class="bg-whiteBG text-deepGray text-base font-medium rounded-2xl space-x-2.5 inline-flex py-3 px-4 items-center w-auto"
             >
               Conoce todas las soluciones de desarrollo
               <img
@@ -359,7 +360,7 @@
                 alt="Conoce todas las soluciones de desarrollo"
                 class="-rotate-90"
               />
-            </button>
+            </a>
           </section>
         </div>
         <aside class="flex justify-end">
@@ -371,7 +372,7 @@
         </aside>
       </div>
       <!-- Content toggle 2 -->
-      <div class="gap-36 pt-[5.625rem] hidden" content-toggle="2">
+      <div class="gap-36 pt-[5.625rem] hidden" content-toggle="marketing">
         <div class="w-[48rem]">
           <article class="space-y-10">
             <h2 class="">Estrategias definitivas</h2>
@@ -428,9 +429,10 @@
                 </p>
               </div>
             </article>
-            <button
+            <a
               type="button"
-              class="bg-whiteBG text-deepGray text-base font-medium rounded-2xl space-x-2.5 flex py-3 px-4 items-center"
+              href="services/marketing"
+              class="bg-whiteBG text-deepGray text-base font-medium rounded-2xl space-x-2.5 inline-flex py-3 px-4 items-center w-auto"
             >
               Conoce todas las soluciones de marketing
               <img
@@ -438,7 +440,7 @@
                 alt="Conoce todas las soluciones de desarrollo"
                 class="-rotate-90"
               />
-            </button>
+            </a>
           </section>
         </div>
         <aside class="flex justify-end">

@@ -1,4 +1,8 @@
-export const setupToggle = (idToggle: string, idToggleContainer: string) => {
+export const setupToggle = (
+  idToggle: string,
+  idToggleContainer: string,
+  initialContent?: string | null
+) => {
   const toggleGroup = document.querySelector(`#${idToggle}`);
   const toggleContainer = document.querySelector(`#${idToggleContainer}`);
 
@@ -24,4 +28,11 @@ export const setupToggle = (idToggle: string, idToggleContainer: string) => {
       v.dataset.selected = "true";
     });
   });
+
+  if (!initialContent) return;
+
+  const initialToggle = toggles.find((t) => t.value === initialContent);
+
+  if (!initialToggle) return;
+  initialToggle.click();
 };

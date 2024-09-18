@@ -5,9 +5,9 @@
   "type": "module",
   "homepage": "https://koden-lab.github.io/koden_landing/",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "dev": "vite --config vite.config.js",
+    "build": "tsc && vite --config vite.config.js build",
+    "preview": "vite --config vite.config.js preview",
     "predeploy": "pnpm build",
     "deploy": "gh-pages -d dist"
   },
@@ -20,6 +20,7 @@
     "vite": "^5.4.1"
   },
   "dependencies": {
-    "animate.css": "^4.1.1"
+    "animate.css": "^4.1.1",
+    "path": "^0.12.7"
   }
 }

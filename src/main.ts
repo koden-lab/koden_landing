@@ -4,7 +4,21 @@ import { setupToggle } from "./components/toggle";
 import { animateNavbar, handleFixedNav } from "./animations/navbar";
 import { scrollOpacity } from "./animations/scroll_opacity";
 
-setupToggle("toggle-services", "toggle-services-container");
+const urlParams = new URLSearchParams(window.location.search);
+const initialContentServices = urlParams.get("services");
+
+setupToggle(
+  "toggle-services",
+  "toggle-services-container",
+  initialContentServices
+);
+if (initialContentServices) {
+  const element = document.querySelector(
+    `[content-toggle=${initialContentServices}]`
+  );
+
+  element?.scrollIntoView({ block: "end" });
+}
 setupToggle("faq-triggers", "faq-container");
 //Etapas
 setupCollapsable("trigger-stage-1", "container-stage-1", "indicator-stage-1");
