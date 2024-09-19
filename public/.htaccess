@@ -1,0 +1,4 @@
+RewriteEngine On
+# Eliminar sufijos .html de las URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)$ $1.html [L]
