@@ -7,6 +7,9 @@ import { setupBackButtonsSlide } from "./animations/back_button";
 import { setupServicesTransition } from "./animations/transition_lefting";
 import { setupServicesDetailTransition } from "./animations/transition_lefting_details";
 import { setupServices } from "./animations/services";
+import { setupAboutUsTransition } from "./animations/transition_lefting_aboutus";
+import { setupTransitionIntoAboutUs } from "./animations/transition_into_aboutus";
+import { setupAnimationBack } from "./animations/animate_back";
 
 const urlParams = new URLSearchParams(window.location.search);
 const initialContentServices = urlParams.get("services");
@@ -17,6 +20,7 @@ setupToggle(
   initialContentServices
 );
 setupServices();
+setupAnimationBack();
 setupToggle("faq-triggers", "faq-container");
 //Etapas
 setupCollapsable("trigger-stage-1", "container-stage-1", "indicator-stage-1");
@@ -86,3 +90,5 @@ animateNavbar();
 setupBackButtonsSlide();
 setupServicesTransition();
 setupServicesDetailTransition();
+setupAboutUsTransition();
+setupTransitionIntoAboutUs();

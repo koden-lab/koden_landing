@@ -9,17 +9,10 @@ export const setupServices = () => {
 
   element?.scrollIntoView({ block: "end", behavior: "instant" });
   if (urlParams.get("animate") === "true") {
-    document.body.classList.add("animate__backInLeft");
-    document.body.classList.add("animate__animated");
-    const url = new URL(window.location.href);
-    url.searchParams.delete("animate");
-    window.history.replaceState(null, "", url.pathname + url.search);
-
     const headingHighlighted = document.querySelector(
       `[content-toggle=${initialContentServices}] h2`
     );
 
-    console.log(headingHighlighted);
     if (!headingHighlighted) return;
 
     setTimeout(() => {
