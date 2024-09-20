@@ -165,7 +165,7 @@
       id="about"
       class="text-center py-[5.75rem] flex flex-col justify-center items-center w-full px-4 lg:px-0"
     >
-      <h2 class="text-[4rem] font-bold w-[50rem]">
+      <h2 class="text-[4rem] font-bold lg:w-[50rem]">
         Impulsados por la innovación
       </h2>
       <p class="lg:w-[50rem] font-light text-xl">
@@ -175,7 +175,7 @@
         Ofrecemos soluciones personalizadas y de alta calidad a cada cliente.
       </p>
       <div
-        class="flex flex-col lg:flex-row pt-[5.125rem] lg:space-x-[8.375rem] text-left w-full"
+        class="flex flex-col lg:flex-row pt-[5.125rem] lg:space-x-[8.375rem] text-left w-full lg:w-auto"
       >
         <div class="lg:max-w-[51rem] space-y-[3.75rem] pt-24">
           <article class="flex items-start gap-5">
@@ -230,7 +230,7 @@
             src="/svg/image1.svg"
             alt=""
             srcset=""
-            class="2xl:size-full scroll-fade"
+            class="lg:size-full scroll-fade"
           />
         </aside>
       </div>
@@ -678,9 +678,11 @@
           class="size-6"
         />
       </a>
-      <div class="flex items-start justify-between w-full pt-48 lg:pt-64">
+      <div
+        class="flex items-start justify-between w-full lg:w-auto pt-48 lg:pt-64"
+      >
         <div
-          class="text-left flex flex-col items-center justify-center lg:pl-[8.375rem] w-full px-8 lg:px-0"
+          class="text-left flex flex-col items-center justify-center w-full px-8 lg:px-0"
           id="stages"
         >
           <article class="flex lg:gap-40 pt-12">
@@ -726,7 +728,7 @@
               </div>
             </div>
           </article>
-          <article class="flex gap-40 pt-12">
+          <article class="flex lg:gap-40 pt-12">
             <div class="flex lg:gap-10">
               <div class="flex flex-col shrink-0 items-center">
                 <span class="aspect-square">
@@ -814,23 +816,25 @@
             </div>
           </article>
         </div>
-        <aside class="flex flex-col gap-[2rem] pt-12 items-end">
+        <aside
+          class="hidden lg:flex flex-col gap-[2rem] pt-12 items-end w-full"
+        >
           <img
             src="/svg/stage_1.svg"
             alt=""
-            class="hidden lg:block size-[87.5%] 2xl:size-full object-scale-down object-left"
+            class="hidden lg:block size-[87.5%] lg:size-full object-scale-down object-center"
           />
 
           <img
             src="/svg/stage_2.svg"
             alt=""
-            class="hidden lg:block size-[87.5%] 2xl:size-full object-scale-down object-right"
+            class="hidden lg:block size-[87.5%] lg:size-full object-scale-down object-right"
           />
 
           <img
             src="/svg/stage_3.svg"
             alt=""
-            class="hidden lg:block size-[87.5%] 2xl:size-full object-scale-down object-left"
+            class="hidden lg:block size-[87.5%] lg:size-full object-scale-down object-center"
           />
         </aside>
       </div>
