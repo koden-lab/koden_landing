@@ -7,7 +7,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maxium-scale=1.0"
+    />
     <meta
       name="description"
       content="Transformamos tus ideas en herramientas digitales que impulsan tu
@@ -59,38 +62,40 @@
     </div>
     <!-- HEADER -->
     <header
-      class="fixed top-[3.625rem] flex items-center gap-5 z-50 animate__bounce"
+      class="fixed top-[3.625rem] flex flex-col lg:flex-row items-center gap-5 z-50 animate__bounce"
     >
       <img
         src="/svg/logo_name.svg"
         alt="Koden"
-        class="w-[5.375rem] transition-opacity duration-[850ms] ease-in-out"
+        class="w-[5.375rem] transition-all duration-[850ms] ease-in-out lg:visible"
         id="koden-logo"
       />
       <nav
         id="main-navbar"
-        class="rounded-2xl divide-x divide-[#737575] backdrop-blur-md bg-deepGray px-5 py-6 flex items-center text-xl font-medium transition-all ease-in-out duration-700"
+        class="rounded-2xl divide-x divide-[#737575] backdrop-blur-md bg-deepGray px-3.5 lg:px-5 py-3 lg:py-6 flex items-center lg:text-xl font-medium transition-all ease-in-out duration-700"
       >
         <a
           href="#"
           onclick="window.scrollTo({top:0, behavior:'smooth'})"
-          class="pr-6 leading-none"
+          class="pr-2 lg:pr-6 leading-none"
           >Inicio</a
         >
-        <a href="#about" class="px-6 leading-none">Nosotros</a>
-        <a href="#services" class="px-6 leading-none">Servicios</a>
-        <a href="#work" class="px-6 leading-none">Trabaja con nosotros</a>
-        <div class="pl-6">
+        <a href="#about" class="px-2 lg:px-6 leading-none">Nosotros</a>
+        <a href="#services" class="px-2 lg:px-6 leading-none">Servicios</a>
+        <a href="#work" class="px-2 lg:px-6 leading-none"
+          >Trabaja con nosotros</a
+        >
+        <div class="pl-2 lg:pl-6">
           <a
             type="button"
             href="#contact"
-            class="bg-whiteBG rounded-2xl leading-none text-deepGray px-4 py-3 flex items-center gap-[0.625rem]"
+            class="bg-whiteBG rounded-xl lg:rounded-2xl leading-none text-deepGray px-2 lg:px-4 py-1.5 lg:py-3 flex items-center gap-[0.625rem]"
           >
             Contacto
             <img
               src="/svg_icons/arrow_outward.svg"
               alt="Contacto flecha"
-              class="size-6"
+              class="size-5 lg:size-6"
             />
           </a>
         </div>
@@ -99,20 +104,20 @@
     <!-- HERO -->
     <main
       id="home"
-      class="mt-24 relative flex flex-col items-center text-center bg-gradient-to-r from-[#1B5299]/80 via-50% via-[#7B9BC4]/80 to-[#6F6FA6]/80 rounded-2xl backdrop-blur-3xl pt-10 px-32 sm:w-[85rem] 2xl:w-[105.4375rem] animate-hero transition-opacity duration-1000"
+      class="mx-8 lg:mx-0 mt-48 lg:mt-24 relative flex flex-col items-center text-center bg-gradient-to-r from-[#1B5299]/80 via-50% via-[#7B9BC4]/80 to-[#6F6FA6]/80 rounded-2xl backdrop-blur-3xl pt-10 px-24 lg:px-32 lg:w-[105.4375rem] animate-hero transition-opacity duration-1000"
     >
       <img
         src="/img/shape_hero_1.png"
-        class="absolute bottom-[4rem] left-[8rem] size-[8.75rem] z-10 floating"
+        class="hidden lg:block absolute bottom-[4rem] left-[8rem] size-[8.75rem] z-10 floating"
         alt=""
       />
       <img
         src="/img/shape_hero_2.png"
-        class="absolute bottom-[20rem] right-[8rem] size-[6.75rem] z-10 floating"
+        class="hidden lg:block absolute bottom-[20rem] right-[8rem] size-[6.75rem] z-10 floating"
         alt=""
       />
       <div
-        class="absolute top-0 bg-gradient-to-b from-[#0e1111] via-[#0e1111] via-[70%] to- w-full h-full animate-hero"
+        class="mx-8 lg:mx-0 absolute top-0 bg-gradient-to-b from-[#0e1111] via-[#0e1111] via-[70%] to-transparent w-full h-full animate-hero"
       ></div>
       <h1 class="text-[4rem] font-bold relative z-10">
         Soluciones a la medida
@@ -133,9 +138,11 @@
           class="size-6"
         />
       </a>
-      <div class="flex relative pt-32 items-start animate-hero">
+      <div
+        class="flex flex-col lg:flex-row relative pt-32 items-start animate-hero"
+      >
         <p
-          class="text-[8rem] w-full font-bold pt-16 mr-8 bg-gradient-to-r from-[#1B5299] to-[12.95%] to-[#9F9FED] text-transparent bg-clip-text"
+          class="text-[6rem] lg:text-[8rem] w-full font-bold pb-8 lg:pb-0 lg:pt-16 lg:mr-8 bg-gradient-to-r from-[#1B5299] to-[12.95%] to-[#9F9FED] text-transparent bg-clip-text"
         >
           Koden
         </p>
@@ -143,11 +150,11 @@
           <img
             src="/svg/phone_hero.svg"
             alt=""
-            class="sm:size-[87.5%] 2xl:size-full -mb-6"
+            class="size-[87.5%] 2xl:size-full -mb-6"
           />
         </div>
         <p
-          class="text-[8rem] w-full font-bold pt-16 -ml-32 bg-gradient-to-r from-[#1B5299] to-[12.95%] to-[#9F9FED] text-transparent bg-clip-text"
+          class="text-[6rem] lg:text-[8rem] w-full font-bold pt-16 lg:-ml-32 bg-gradient-to-r from-[#1B5299] to-[12.95%] to-[#9F9FED] text-transparent bg-clip-text"
         >
           Labs
         </p>
@@ -156,24 +163,26 @@
     <!-- ABOUT  -->
     <section
       id="about"
-      class="text-center py-[5.75rem] flex flex-col justify-center items-center"
+      class="text-center py-[5.75rem] flex flex-col justify-center items-center w-full px-4 lg:px-0"
     >
       <h2 class="text-[4rem] font-bold w-[50rem]">
         Impulsados por la innovación
       </h2>
-      <p class="w-[50rem] font-light text-xl">
+      <p class="lg:w-[50rem] font-light text-xl">
         Somos expertos en tecnología, diseño y desarrollo.
       </p>
-      <p class="w-[50rem] font-light text-xl">
+      <p class="lg:w-[50rem] font-light text-xl">
         Ofrecemos soluciones personalizadas y de alta calidad a cada cliente.
       </p>
-      <div class="flex pt-[5.125rem] space-x-[8.375rem] text-left">
-        <div class="max-w-[51rem] space-y-[3.75rem] pt-24">
+      <div
+        class="flex flex-col lg:flex-row pt-[5.125rem] lg:space-x-[8.375rem] text-left w-full"
+      >
+        <div class="lg:max-w-[51rem] space-y-[3.75rem] pt-24">
           <article class="flex items-start gap-5">
             <img
               src="/svg_icons/upgrade.svg"
               alt="Innovar, automatizar y optimizar"
-              class="size-[2.625rem]"
+              class="lg:size-[2.625rem]"
             />
             <span class>
               <h3 class="text-[2rem] leading-none font-bold">
@@ -190,7 +199,7 @@
             <img
               src="/svg_icons/workspace_premium.svg"
               alt="Comprometidos con la calidad"
-              class="size-[2.625rem]"
+              class="lg:size-[2.625rem]"
             />
             <span>
               <h3 class="text-[2rem] leading-none font-bold">
@@ -216,12 +225,12 @@
             />
           </a>
         </div>
-        <aside class="flex justify-end">
+        <aside class="flex w-full justify-center pt-10 lg:pt-0 lg:justify-end">
           <img
             src="/svg/image1.svg"
             alt=""
             srcset=""
-            class="sm:size-[87.5%] 2xl:size-full scroll-fade"
+            class="2xl:size-full scroll-fade"
           />
         </aside>
       </div>
@@ -231,7 +240,9 @@
       id="services"
       class="flex flex-col items-center pt-[5.625rem] text-whiteBG"
     >
-      <article class="flex items-center gap-[5rem]">
+      <article
+        class="flex flex-col lg:flex-row items-center gap-[5rem] px-4 lg:px-0"
+      >
         <div class="max-w-[40rem]">
           <h2 class="text-left max-w-[35.25rem]">Conoce nuestros servicios</h2>
           <p class="text-xl font-light">
@@ -242,11 +253,11 @@
             cliente.
           </p>
         </div>
-        <aside class="flex justify-end">
+        <aside class="flex justify-center lg:justify-end">
           <img
             src="/svg/image2.svg"
             alt="Conoce nuestros servicios"
-            class="sm:size-[87.5%] 2xl:size-full"
+            class="size-[87.5%] 2xl:size-full"
           />
         </aside>
       </article>
@@ -257,10 +268,10 @@
       id="toggle-services-container"
     >
       <nav
-        class="rounded-2xl divide-x divide-[#737575] bg-deepGray px-5 py-6 text-xl font-medium"
+        class="rounded-2xl divide-x divide-[#737575] bg-deepGray px-3.5 lg:px-5 py-3 lg:py-6 text-base lg:text-xl font-medium"
         id="toggle-services"
       >
-        <span class="pr-6">
+        <span class="pr-2 lg:pr-6">
           <button
             data-selected="true"
             type="button"
@@ -270,7 +281,7 @@
             Desarrollo
           </button>
         </span>
-        <span class="px-6">
+        <span class="px-2 lg:px-6">
           <button
             type="button"
             class="leading-none data-[selected=true]:bg-whiteBG data-[selected=true]:text-deepGray data-[selected=true]:rounded-xl"
@@ -279,7 +290,7 @@
             Marketing digital
           </button>
         </span>
-        <span class="px-6">
+        <span class="px-2 lg:px-6">
           <button
             type="button"
             class="leading-none data-[selected=true]:bg-whiteBG data-[selected=true]:text-deepGray data-[selected=true]:rounded-xl"
@@ -288,7 +299,7 @@
             IA/Blockchain
           </button>
         </span>
-        <span class="pl-6">
+        <span class="pl-2 lg:pl-6">
           <button
             type="button"
             class="leading-none data-[selected=true]:bg-whiteBG data-[selected=true]:text-deepGray data-[selected=true]:rounded-xl"
@@ -299,9 +310,12 @@
         </span>
       </nav>
       <!-- Content 1 -->
-      <div class="gap-36 pt-[5.625rem] flex" content-toggle="development">
-        <div class="w-[48rem]">
-          <article class="space-y-10">
+      <div
+        class="w-full gap-36 pt-[5.625rem] flex flex-col px-4 lg:px-0 lg:flex-row"
+        content-toggle="development"
+      >
+        <div class="w-full lg:w-[48rem]">
+          <article class="lg:space-y-10">
             <h2 class="">Poderosas soluciones de software</h2>
             <p>
               Utilizamos tecnología avanzada y un enfoque estratégico para
@@ -309,12 +323,12 @@
               el crecimiento empresarial.
             </p>
           </article>
-          <section class="space-y-[3.75rem] pt-20">
+          <section class="space-y-[2rem] lg:space-y-[3.75rem] pt-10 lg:pt-20">
             <article class="flex gap-5">
               <img
                 src="/svg_icons/developer_mode_tv.svg"
                 alt="Desarrollo web"
-                class="size-12"
+                class="size-10 lg:size-12"
               />
               <div class="space-y-5">
                 <h3 class="leading-none">Desarrollo web</h3>
@@ -329,7 +343,7 @@
               <img
                 src="/svg_icons/developer_mode.svg"
                 alt="Desarrollo móvil"
-                class="size-12"
+                class="size-10 lg:size-12"
               />
               <div class="space-y-5">
                 <h3 class="leading-none">Desarrollo móvil</h3>
@@ -344,7 +358,7 @@
               <img
                 src="/svg_icons/interactive_space.svg"
                 alt="Interfaces y UX"
-                class="size-12"
+                class="size-10 lg:size-12"
               />
               <div class="space-y-5">
                 <h3 class="leading-none">
@@ -375,7 +389,7 @@
           <img
             src="/svg/technologies.svg"
             alt="Tecnologías"
-            class="pt-20 sm:size-[87.5%] 2xl:size-full object-scale-down"
+            class="pt-20 size-[87.5%] 2xl:size-full object-scale-down"
           />
         </aside>
       </div>
@@ -455,7 +469,7 @@
           <img
             src="/svg/service2.svg"
             alt="Tecnologías"
-            class="pt-20 sm:size-[87.5%] 2xl:size-full object-scale-down"
+            class="pt-20 size-[87.5%] 2xl:size-full object-scale-down"
           />
         </aside>
       </div>
@@ -534,13 +548,13 @@
           <img
             src="/svg/service3.svg"
             alt="Tecnologías"
-            class="pt-20 sm:size-[87.5%] 2xl:size-full object-scale-down"
+            class="pt-20 size-[87.5%] 2xl:size-full object-scale-down"
           />
         </aside>
       </div>
       <!-- Content toggle 4 -->
       <div class="gap-36 pt-[5.625rem] hidden" content-toggle="erpcrm">
-        <div class="w-[48rem]">
+        <div class="lg:w-[48rem]">
           <article class="space-y-10">
             <h2 class="">Soluciones de múltiples</h2>
             <p>
@@ -598,8 +612,8 @@
             </article>
             <a
               type="button"
-              href="services/erpcrm"
-              class="bg-whiteBG text-deepGray text-base font-medium rounded-2xl space-x-2.5 inline-flex py-3 px-4 items-center w-auto"
+              href="services/erp"
+              class="services-transition bg-whiteBG text-deepGray text-base font-medium rounded-2xl space-x-2.5 inline-flex py-3 px-4 items-center w-auto"
             >
               Conoce todas las soluciones de ERP y CRM
               <img
@@ -614,7 +628,7 @@
           <img
             src="/svg/erp_techs.svg"
             alt="Tecnologías de ERP y CRM"
-            class="pt-20 sm:size-[87.5%] 2xl:size-full object-scale-down"
+            class="pt-20 size-[87.5%] 2xl:size-full object-scale-down"
           />
         </aside>
       </div>
@@ -626,22 +640,22 @@
     >
       <img
         src="/img/crystal.png"
-        class="absolute top-44 left-40 size-[20.5rem] floating"
+        class="absolute top-44 lg:top-44 left-2 lg:left-40 size-[10rem] lg:size-[20.5rem] floating"
         alt=""
       />
       <img
         src="/img/crystal2.png"
-        class="absolute top-[35rem] right-[8rem] size-[17.25rem] floating"
+        class="absolute top-[50rem] lg:top-[35rem] right-[1rem] lg:right-[8rem] size-[10rem] lg:size-[17.25rem] floating"
         alt=""
       />
       <img
         src="/svg/code.svg"
-        class="absolute top-[28rem] right-[7.5rem] w-[6.8125rem] h-[5.25rem]"
+        class="absolute top-[20rem] lg:top-[28rem] right-[2rem] lg:right-[7.5rem] w-[6.8125rem] h-[5.25rem]"
         alt=""
       />
       <img
         src="/svg/code2.svg"
-        class="absolute top-[45rem] left-[10rem] w-[6.39419rem] h-[4.83238rem]"
+        class="absolute top-[52rem] lg:top-[45rem] left-[4rem] lg:left-[10rem] w-[6.39419rem] h-[4.83238rem]"
         alt=""
       />
       <h2
@@ -664,39 +678,38 @@
           class="size-6"
         />
       </a>
-      <div class="flex items-start justify-between w-full pt-64">
+      <div class="flex items-start justify-between w-full pt-48 lg:pt-64">
         <div
-          class="text-left flex flex-col items-center justify-center pl-[8.375rem]"
+          class="text-left flex flex-col items-center justify-center lg:pl-[8.375rem] w-full px-8 lg:px-0"
           id="stages"
         >
-          <article class="flex gap-40 pt-12">
-            <div class="flex gap-10">
+          <article class="flex lg:gap-40 pt-12">
+            <div class="flex lg:gap-10 w-full">
               <div class="flex flex-col shrink-0 items-center">
                 <span class="aspect-square">
                   <img
                     src="/svg/number_1.svg"
                     alt="3"
-                    class="sm:size-[87.5%] 2xl:size-full"
+                    class="size-[87.5%] 2xl:size-full"
                   />
                 </span>
                 <div
                   class="h-full border w-[0.1875rem] border-white bg-white mt-6"
                 ></div>
               </div>
-              <div class="w-[39.8125rem]">
+              <div class="lg:w-[39.8125rem]">
                 <h3 class="text-[2.5rem] font-bold text-white leading-normal">
-                  Acción
+                  Cuéntanos acerca de tu proyecto
                 </h3>
                 <p class="text-white font-medium text-[1.25rem] leading-normal">
-                  Nuestros desarrolladores, diseñadores y especialistas trabajan
-                  para llevar tu proyecto a la realidad. Mantenemos una
-                  comunicación constante contigo, proporcionándote
-                  actualizaciones regulares para que estés al tanto del
-                  progreso.
+                  Todo comienza con una conversación. Nos acercamos a ti para
+                  conocer a fondo tus necesidades, objetivos y desafíos.
+                  Queremos entender a detalle qué problema estás tratando de
+                  resolver o qué proyecto deseas llevar a cabo.
                 </p>
                 <button
                   id="trigger-stage-1"
-                  class="flex w-full text-left mt-[13.125rem] border-b pb-[0.9375rem]"
+                  class="flex w-full text-left mt-[5rem] lg:mt-[13.125rem] border-b pb-[0.9375rem]"
                 >
                   <p class="grow text-xl font-bold">Más sobre esta etapa</p>
                   <p id="indicator-stage-1" class="text-xl font-bold">+</p>
@@ -714,20 +727,20 @@
             </div>
           </article>
           <article class="flex gap-40 pt-12">
-            <div class="flex gap-10">
+            <div class="flex lg:gap-10">
               <div class="flex flex-col shrink-0 items-center">
                 <span class="aspect-square">
                   <img
                     src="/svg/number_2.svg"
                     alt="2"
-                    class="sm:size-[87.5%] 2xl:size-full"
+                    class="size-[87.5%] 2xl:size-full"
                   />
                 </span>
                 <div
                   class="h-full border w-[0.1875rem] border-white bg-white mt-6"
                 ></div>
               </div>
-              <div class="w-[39.8125rem]">
+              <div class="lg:w-[39.8125rem]">
                 <h3 class="text-[2.5rem] font-bold text-white leading-normal">
                   Planeación
                 </h3>
@@ -739,7 +752,7 @@
                 </p>
                 <button
                   id="trigger-stage-2"
-                  class="flex w-full text-left mt-[13.125rem] border-b pb-[0.9375rem]"
+                  class="flex w-full text-left mt-[5rem] lg:mt-[13.125rem] border-b pb-[0.9375rem]"
                 >
                   <p class="grow text-xl font-bold">Más sobre esta etapa</p>
                   <p id="indicator-stage-2" class="text-xl font-bold">+</p>
@@ -756,21 +769,21 @@
               </div>
             </div>
           </article>
-          <article class="flex gap-64 pt-12">
-            <div class="flex gap-10">
+          <article class="flex lg:gap-64 pt-12">
+            <div class="flex lg:gap-10">
               <div class="flex flex-col shrink-0 items-center">
                 <span class="aspect-square">
                   <img
                     src="/svg/number_3.svg"
                     alt="3"
-                    class="sm:size-[87.5%] 2xl:size-full"
+                    class="size-[87.5%] 2xl:size-full"
                   />
                 </span>
                 <div
                   class="h-full border w-[0.1875rem] border-white bg-white mt-6"
                 ></div>
               </div>
-              <div class="w-[39.8125rem]">
+              <div class="lg:w-[39.8125rem]">
                 <h3 class="text-[2.5rem] font-bold text-white leading-normal">
                   Acción
                 </h3>
@@ -783,7 +796,7 @@
                 </p>
                 <button
                   id="trigger-stage-3"
-                  class="flex w-full text-left mt-[13.125rem] border-b pb-[0.9375rem]"
+                  class="flex w-full text-left mt-[5rem] lg:mt-[13.125rem] border-b pb-[0.9375rem]"
                 >
                   <p class="grow text-xl font-bold">Más sobre esta etapa</p>
                   <p id="indicator-stage-3" class="text-xl font-bold">+</p>
@@ -805,34 +818,36 @@
           <img
             src="/svg/stage_1.svg"
             alt=""
-            class="size-[87.5%] 2xl:size-full object-scale-down object-left"
+            class="hidden lg:block size-[87.5%] 2xl:size-full object-scale-down object-left"
           />
 
           <img
             src="/svg/stage_2.svg"
             alt=""
-            class="size-[87.5%] 2xl:size-full object-scale-down object-right"
+            class="hidden lg:block size-[87.5%] 2xl:size-full object-scale-down object-right"
           />
 
           <img
             src="/svg/stage_3.svg"
             alt=""
-            class="size-[87.5%] 2xl:size-full object-scale-down object-left"
+            class="hidden lg:block size-[87.5%] 2xl:size-full object-scale-down object-left"
           />
         </aside>
       </div>
     </section>
     <!-- FAQS -->
     <section
-      class="bg-whiteBG flex flex-col w-full items-center pb-[14.06rem]"
+      class="bg-whiteBG flex flex-col w-full items-center pb-[7rem] lg:pb-[14.06rem]"
       id="faq-container"
     >
-      <div class="flex justify-evenly w-full">
+      <div
+        class="flex flex-col lg:flex-row items-center lg:justify-evenly w-full"
+      >
         <nav
           class="flex items-start flex-col text-deepGray transition-colors"
           id="faq-triggers"
         >
-          <span class="pb-20">
+          <span class="pb-14 lg:pb-20">
             <h2
               class="text-[6rem] leading-none pt-[5rem] font-bold bg-gradient-to-r from-[#1B5299] from-[0.52%] to-[#9F9FED] to-[111%] text-transparent bg-clip-text"
             >
@@ -887,7 +902,7 @@
         </nav>
         <div
           content-toggle="1"
-          class="flex flex-col text-deepGray gap-[2.1875rem] w-[59.25rem] pt-[14.125rem]"
+          class="flex flex-col text-deepGray gap-[1.5rem] lg:gap-[2.1875rem] px-4 lg:w-[59.25rem] pt-[5rem] lg:pt-[14.125rem]"
         >
           <article>
             <button
@@ -895,7 +910,7 @@
               class="flex w-full text-left border-b pb-[0.9375rem]"
             >
               <p
-                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+                class="grow text-[1.75rem] lg:text-[2rem] leading-normal font-bold text-deepGray"
               >
                 ¿Qué tecnologías utilizan para el desarrollo web y móvil?
               </p>
@@ -919,7 +934,7 @@
               class="flex w-full text-left border-b pb-[0.9375rem]"
             >
               <p
-                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+                class="grow text-[1.75rem] lg:text-[2rem] leading-normal font-bold text-deepGray"
               >
                 ¿Cómo garantizan que mi sitio web sea responsivo y rápido?
               </p>
@@ -943,7 +958,7 @@
               class="flex w-full text-left border-b pb-[0.9375rem]"
             >
               <p
-                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+                class="grow text-[1.75rem] lg:text-[2rem] leading-normal font-bold text-deepGray"
               >
                 ¿Puedo actualizar mi sitio web por mi cuenta?
               </p>
@@ -968,7 +983,7 @@
               class="flex w-full text-left border-b pb-[0.9375rem]"
             >
               <p
-                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+                class="grow text-[1.75rem] lg:text-[2rem] leading-normal font-bold text-deepGray"
               >
                 ¿Ofrecen mantenimiento una vez entregado?
               </p>
@@ -989,7 +1004,7 @@
         </div>
         <div
           content-toggle="2"
-          class="hidden flex-col text-deepGray gap-[2.1875rem] w-[59.25rem] pt-[14.125rem]"
+          class="hidden flex-col text-deepGray gap-[2.1875rem] px-4 lg:w-[59.25rem] pt-[14.125rem]"
         >
           <article>
             <button
@@ -997,7 +1012,7 @@
               class="flex w-full text-left border-b pb-[0.9375rem]"
             >
               <p
-                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+                class="grow text-[1.75rem] lg:text-[2rem] leading-normal font-bold text-deepGray"
               >
                 ¿Qué plataformas de redes sociales gestionan?
               </p>
@@ -1024,7 +1039,7 @@
               class="flex w-full text-left border-b pb-[0.9375rem]"
             >
               <p
-                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+                class="grow text-[1.75rem] lg:text-[2rem] leading-normal font-bold text-deepGray"
               >
                 ¿En cuánto tiempo se ven resultados de las campañas
               </p>
@@ -1051,7 +1066,7 @@
               class="flex w-full text-left border-b pb-[0.9375rem]"
             >
               <p
-                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+                class="grow text-[1.75rem] lg:text-[2rem] leading-normal font-bold text-deepGray"
               >
                 ¿Cómo medimos el éxito de las campañas de marketing?
               </p>
@@ -1076,7 +1091,7 @@
         </div>
         <div
           content-toggle="3"
-          class="hidden flex-col text-deepGray gap-[2.1875rem] w-[59.25rem] pt-[14.125rem]"
+          class="hidden flex-col text-deepGray gap-[2.1875rem] px-4 lg:w-[59.25rem] pt-[14.125rem]"
         >
           <article>
             <button
@@ -1084,7 +1099,7 @@
               class="flex w-full text-left border-b pb-[0.9375rem]"
             >
               <p
-                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+                class="grow text-[1.75rem] lg:text-[2rem] leading-normal font-bold text-deepGray"
               >
                 ¿Qué tecnologías utilizan para el desarrollo web y móvil?
               </p>
@@ -1111,7 +1126,7 @@
               class="flex w-full text-left border-b pb-[0.9375rem]"
             >
               <p
-                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+                class="grow text-[1.75rem] lg:text-[2rem] leading-normal font-bold text-deepGray"
               >
                 ¿Cómo garantizan que mi sitio web sea responsivo y rápido?
               </p>
@@ -1138,7 +1153,7 @@
               class="flex w-full text-left border-b pb-[0.9375rem]"
             >
               <p
-                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+                class="grow text-[1.75rem] lg:text-[2rem] leading-normal font-bold text-deepGray"
               >
                 ¿Puedo actualizar mi sitio web por mi cuenta?
               </p>
@@ -1163,7 +1178,7 @@
         </div>
         <div
           content-toggle="4"
-          class="hidden flex-col text-deepGray gap-[2.1875rem] w-[59.25rem] pt-[14.125rem]"
+          class="hidden flex-col text-deepGray gap-[2.1875rem] px-4 lg:w-[59.25rem] pt-[14.125rem]"
         >
           <article>
             <button
@@ -1171,7 +1186,7 @@
               class="flex w-full text-left border-b pb-[0.9375rem]"
             >
               <p
-                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+                class="grow text-[1.75rem] lg:text-[2rem] leading-normal font-bold text-deepGray"
               >
                 ¿Qué tecnologías utilizan para el desarrollo web y móvil?
               </p>
@@ -1198,7 +1213,7 @@
               class="flex w-full text-left border-b pb-[0.9375rem]"
             >
               <p
-                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+                class="grow text-[1.75rem] lg:text-[2rem] leading-normal font-bold text-deepGray"
               >
                 ¿Cómo garantizan que mi sitio web sea responsivo y rápido?
               </p>
@@ -1225,7 +1240,7 @@
               class="flex w-full text-left border-b pb-[0.9375rem]"
             >
               <p
-                class="grow text-[2rem] leading-normal font-bold text-deepGray"
+                class="grow text-[1.75rem] lg:text-[2rem] leading-normal font-bold text-deepGray"
               >
                 ¿Puedo actualizar mi sitio web por mi cuenta?
               </p>
@@ -1257,15 +1272,15 @@
     >
       <img
         src="/img/shape_contact_1.png"
-        class="absolute top-0 left-0 sm:w-[394.625px] 2xl:[451px]"
+        class="absolute top-0 left-0 w-[394.625px] lg:[451px]"
         alt=""
       />
       <img
         src="/img/shape_contact_2.png"
-        class="absolute bottom-0 right-0 sm:w-[429.625px] 2xl:w-[491px]"
+        class="absolute bottom-0 right-0 w-[429.625px] lg:w-[491px]"
         alt=""
       />
-      <div class="flex gap-6 z-10">
+      <div class="flex flex-col lg:flex-row gap-6 z-10">
         <div>
           <h2 class="text-[2.5rem] font-bold pb-[1.875rem]">Escríbenos</h2>
           <form
@@ -1381,7 +1396,7 @@
         class="absolute bottom-0 right-0"
         alt=""
       />
-      <div class="space-y-[1.5625rem]">
+      <div class="space-y-[1.5625rem] z-10 px-8 lg:px-0">
         <h2 class="text-[3rem] font-bold">Comencemos tu viaje al éxito</h2>
         <p class="font-medium">
           Pizza ipsum dolor meat lovers buffalo. Onions lovers ham pizza
@@ -1390,28 +1405,35 @@
       </div>
       <img src="/svg/logo_name.svg" alt="Koden" class="w-[5.375rem]" />
       <nav
-        class="rounded-2xl divide-x divide-[#737575] bg-deepGray px-5 py-6 flex items-center text-xl font-medium"
+        class="z-10 rounded-2xl divide-x divide-[#737575] bg-deepGray px-5 py-6 flex items-center text-base font-medium"
       >
-        <a href="#home" class="pr-6 leading-none">Inicio</a>
-        <a href="#about" class="px-6 leading-none">Nosotros</a>
-        <a href="#services" class="px-6 leading-none">Servicios</a>
-        <a href="#" class="px-6 leading-none">Trabaja con nosotros</a>
-        <div class="pl-6">
+        <a
+          href="#"
+          onclick="window.scrollTo({top:0, behavior:'smooth'})"
+          class="pr-2 lg:pr-6 leading-none"
+          >Inicio</a
+        >
+        <a href="#about" class="px-2 lg:px-6 leading-none">Nosotros</a>
+        <a href="#services" class="px-2 lg:px-6 leading-none">Servicios</a>
+        <a href="#work" class="px-2 lg:px-6 leading-none"
+          >Trabaja con nosotros</a
+        >
+        <div class="pl-2 lg:pl-6">
           <a
             type="button"
             href="#contact"
-            class="bg-whiteBG rounded-2xl leading-none text-deepGray px-4 py-3 flex items-center gap-[0.625rem]"
+            class="bg-whiteBG rounded-xl lg:rounded-2xl leading-none text-deepGray px-2 lg:px-4 py-1.5 lg:py-3 flex items-center gap-[0.625rem]"
           >
             Contacto
             <img
               src="/svg_icons/arrow_outward.svg"
               alt="Contacto flecha"
-              class="size-6"
+              class="size-5 lg:size-6"
             />
           </a>
         </div>
       </nav>
-      <span class="flex gap-[1.0625rem] text-base">
+      <span class="flex gap-[1.0625rem] text-base z-10">
         <p>Política de privacidad</p>
         <p>Términos del servicio</p>
       </span>

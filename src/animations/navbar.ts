@@ -44,14 +44,17 @@ export const handleFixedNav = () => {
   window.addEventListener("scroll", () => {
     if (window.scrollY !== 0) {
       navbar.classList.remove("bg-deepGray");
-      navbar.classList.add("bg-deepGray/50");
-      navbar.classList.add("translate-x-[-3.25rem]");
+      navbar.classList.add("bg-deepGray/50", "lg:translate-x-[-3.25rem]");
+
       logo.classList.add("opacity-0");
+
+      logo.classList.add("-mt-32", "lg:mt-0");
     } else {
       navbar.classList.remove("bg-deepGray/50");
       navbar.classList.add("bg-deepGray");
-      navbar.classList.remove("opacity-0");
-      navbar.classList.remove("translate-x-[-3.25rem]");
+      navbar.classList.remove("opacity-0", "lg:translate-x-[-3.25rem]");
+      logo.classList.remove("-mt-32", "lg:mt-0");
+
       logo.classList.remove("opacity-0");
     }
   });
