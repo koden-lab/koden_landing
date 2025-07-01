@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  background-color: #0e1111;
+  background-color: #0a0a0a;
   color: white;
   scroll-behavior: smooth;
 
@@ -32,31 +32,32 @@
   }
 
   .glass {
-    background: rgba(255, 255, 255, 0.14);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.9px);
-    -webkit-backdrop-filter: blur(6.9px);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
   .divider {
     @apply h-[1.8125rem] w-[0.0625rem];
   }
 
   h2 {
-    @apply text-[4rem] font-bold leading-normal text-whiteBG;
+    @apply text-[3rem] md:text-[3.5rem] lg:text-[4rem] font-bold leading-tight text-whiteBG;
   }
 
   h3 {
-    @apply text-white text-xl font-bold leading-normal;
+    @apply text-white text-lg md:text-xl font-bold leading-tight;
   }
   p {
-    @apply text-whiteBG text-xl font-light;
+    @apply text-whiteBG/90 text-base md:text-lg lg:text-xl font-light leading-relaxed;
   }
   nav button {
-    @apply py-1.5 lg:py-2.5 px-1.5 lg:px-3 transition-colors rounded-xl;
+    @apply py-1.5 lg:py-2.5 px-1.5 lg:px-3 transition-all duration-300 rounded-xl hover:bg-whiteBG/10;
   }
   nav button.selected {
-    @apply bg-whiteBG text-deepGray rounded-xl;
+    @apply bg-whiteBG text-deepGray rounded-xl shadow-lg shadow-whiteBG/20;
   }
   section.contact {
     background: radial-gradient(
@@ -83,7 +84,7 @@
   }
 
   input.primary {
-    @apply rounded-lg p-2.5 text-deepGray placeholder-[#818181] text-sm font-medium bg-[#E7E7E7] leading-normal w-full;
+    @apply rounded-xl p-3 text-deepGray placeholder-[#818181] text-sm font-medium bg-[#F5F5F5] leading-normal w-full transition-all duration-300 focus:ring-2 focus:ring-lightBlue/50 focus:bg-white;
   }
   label.primary {
     @apply text-black text-base font-medium pb-[0.5625rem] pt-[1rem];
@@ -98,27 +99,30 @@
     @apply text-[#8D8D8D] text-base font-medium  pt-[1rem];
   }
   textarea {
-    @apply rounded-lg p-2.5 text-deepGray placeholder-[#818181] text-sm font-medium bg-[#E7E7E7] leading-normal resize-none w-full outline-none;
+    @apply rounded-xl p-3 text-deepGray placeholder-[#818181] text-sm font-medium bg-[#F5F5F5] leading-normal resize-none w-full outline-none transition-all duration-300 focus:ring-2 focus:ring-lightBlue/50 focus:bg-white;
   }
   button.send {
-    @apply bg-deepGray text-whiteBG py-3 px-4 flex items-center justify-center gap-2.5 rounded-2xl mt-4;
+    @apply bg-gradient-to-r from-deepBlue to-lightPurple text-whiteBG py-3 px-6 flex items-center justify-center gap-2.5 rounded-2xl mt-4 transition-all duration-300 hover:shadow-lg hover:shadow-lightPurple/30 hover:scale-105;
   }
   .floating {
     animation-name: floating;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
 
   @keyframes floating {
     0% {
-      transform: translate(0, 0px);
+      transform: translate(0, 0px) rotate(0deg);
     }
-    50% {
-      transform: translate(0, 15px);
+    33% {
+      transform: translate(10px, 15px) rotate(2deg);
+    }
+    66% {
+      transform: translate(-10px, 5px) rotate(-2deg);
     }
     100% {
-      transform: translate(0, -0px);
+      transform: translate(0, 0px) rotate(0deg);
     }
   }
 
@@ -130,5 +134,65 @@
   }
   .body-fade-out-2 {
     @apply translate-x-full transition-transform duration-[350ms] ease-linear overflow-x-hidden;
+  }
+
+  /* Nuevas animaciones atractivas */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px rgba(74, 209, 203, 0.3);
+    }
+    to {
+      box-shadow: 0 0 30px rgba(74, 209, 203, 0.6), 0 0 40px rgba(159, 159, 237, 0.3);
+    }
+  }
+
+  /* Mejoras en gradientes */
+  .gradient-text {
+    background: linear-gradient(45deg, #4AD1CB, #9F9FED, #1B5299);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 }

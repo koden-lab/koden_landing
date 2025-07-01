@@ -72,30 +72,30 @@
       />
       <nav
         id="main-navbar"
-        class="rounded-2xl divide-x divide-[#737575] backdrop-blur-md bg-deepGray px-3.5 lg:px-5 py-3 lg:py-6 flex items-center lg:text-xl font-medium transition-all ease-in-out duration-700"
+        class="rounded-full divide-x divide-white/10 backdrop-blur-xl bg-white/5 border border-white/10 px-3.5 lg:px-5 py-3 lg:py-6 flex items-center lg:text-xl font-medium transition-all ease-in-out duration-700 shadow-xl shadow-black/20 animate-glow"
       >
         <a
           href="#"
           onclick="window.scrollTo({top:0, behavior:'smooth'})"
-          class="pr-2 lg:pr-6 leading-none"
+          class="pr-2 lg:pr-6 leading-none hover:text-lightBlue transition-colors duration-300"
           >Inicio</a
         >
-        <a href="#about" class="px-2 lg:px-6 leading-none">Nosotros</a>
-        <a href="#services" class="px-2 lg:px-6 leading-none">Servicios</a>
-        <a href="#work" class="px-2 lg:px-6 leading-none"
+        <a href="#about" class="px-2 lg:px-6 leading-none hover:text-lightBlue transition-colors duration-300">Nosotros</a>
+        <a href="#services" class="px-2 lg:px-6 leading-none hover:text-lightBlue transition-colors duration-300">Servicios</a>
+        <a href="#work" class="px-2 lg:px-6 leading-none hover:text-lightBlue transition-colors duration-300"
           >Trabaja con nosotros</a
         >
         <div class="pl-2 lg:pl-6">
           <a
             type="button"
             href="#contact"
-            class="bg-whiteBG rounded-xl lg:rounded-2xl leading-none text-deepGray px-2 lg:px-4 py-1.5 lg:py-3 flex items-center gap-[0.625rem]"
+            class="bg-gradient-to-r from-lightBlue to-lightPurple rounded-full leading-none text-white px-3 lg:px-5 py-1.5 lg:py-3 flex items-center gap-[0.625rem] transition-all duration-300 hover:shadow-lg hover:shadow-lightBlue/30 hover:scale-105"
           >
             Contacto
             <img
               src="/svg_icons/arrow_outward.svg"
               alt="Contacto flecha"
-              class="size-5 lg:size-6"
+              class="size-5 lg:size-6 invert"
             />
           </a>
         </div>
@@ -104,7 +104,7 @@
     <!-- HERO -->
     <main
       id="home"
-      class="mx-8 lg:mx-0 mt-48 lg:mt-24 relative flex flex-col items-center text-center bg-gradient-to-r from-[#1B5299]/80 via-50% via-[#7B9BC4]/80 to-[#6F6FA6]/80 rounded-2xl backdrop-blur-3xl pt-10 px-24 lg:px-32 lg:w-[105.4375rem] animate-hero transition-opacity duration-1000"
+      class="mx-8 lg:mx-0 mt-60 lg:mt-40 relative flex flex-col items-center text-center bg-gradient-to-br from-[#1B5299]/60 via-[#9F9FED]/40 to-[#4AD1CB]/30 rounded-3xl backdrop-blur-3xl pt-10 px-8 md:px-16 lg:px-32 lg:w-[105.4375rem] animate-hero transition-all duration-1000 shadow-2xl shadow-lightBlue/20 border border-white/10"
     >
       <img
         src="/img/shape_hero_1.png"
@@ -117,32 +117,32 @@
         alt=""
       />
       <div
-        class="mx-8 lg:mx-0 absolute top-0 bg-gradient-to-b from-[#0e1111] via-[#0e1111] via-[70%] to-transparent w-full h-full animate-hero"
+        class="mx-8 lg:mx-0 absolute top-0 bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a] via-[60%] to-transparent w-full h-full animate-hero rounded-3xl"
       ></div>
-      <h1 class="text-[4rem] font-bold relative z-10">
+      <h1 class="text-[3rem] md:text-[3.5rem] lg:text-[4.5rem] font-bold relative z-10 bg-gradient-to-r from-white to-lightBlue bg-clip-text text-transparent">
         Soluciones a la medida
       </h1>
-      <p class="text-xl font-light mt-5 z-10 relative">
+      <p class="text-lg md:text-xl font-light mt-5 z-10 relative text-white/90 max-w-2xl">
         Transformamos tus ideas en herramientas digitales que impulsan tu
         negocio.
       </p>
       <a
         type="button"
         href="#about"
-        class="bg-whiteBG text-deepGray text-base py-3 px-4 rounded-2xl font-medium inline-flex items-center gap-[0.625rem] mt-10 z-10 w-auto"
+        class="bg-white/10 backdrop-blur-sm border border-white/20 text-white text-base py-3 px-6 rounded-full font-medium inline-flex items-center gap-[0.625rem] mt-10 z-10 w-auto transition-all duration-300 hover:bg-white/20 hover:scale-105 hover:shadow-lg hover:shadow-white/20"
       >
         Descubre más
         <img
           src="/svg_icons/arrow_upward_alt.svg"
           alt="Discover more"
-          class="size-6"
+          class="size-6 invert"
         />
       </a>
       <div
         class="flex flex-col lg:flex-row relative pt-32 items-start animate-hero"
       >
         <p
-          class="text-[6rem] lg:text-[8rem] w-full font-bold pb-8 lg:pb-0 lg:pt-16 lg:mr-8 bg-gradient-to-r from-[#1B5299] to-[12.95%] to-[#9F9FED] text-transparent bg-clip-text"
+          class="text-[5rem] lg:text-[7rem] xl:text-[8rem] w-full font-bold pb-8 lg:pb-0 lg:pt-16 lg:mr-8 gradient-text"
         >
           Koden
         </p>
@@ -154,7 +154,7 @@
           />
         </div>
         <p
-          class="text-[6rem] lg:text-[8rem] w-full font-bold pt-16 lg:-ml-32 bg-gradient-to-r from-[#1B5299] to-[12.95%] to-[#9F9FED] text-transparent bg-clip-text"
+          class="text-[5rem] lg:text-[7rem] xl:text-[8rem] w-full font-bold pt-16 lg:-ml-32 gradient-text"
         >
           Labs
         </p>
@@ -165,7 +165,7 @@
       id="about"
       class="text-center py-[5.75rem] flex flex-col justify-center items-center w-full px-4 lg:px-0"
     >
-      <h2 class="text-[4rem] font-bold lg:w-[50rem]">
+      <h2 class="text-[3rem] md:text-[3.5rem] lg:text-[4rem] font-bold lg:w-[50rem] bg-gradient-to-r from-white via-lightBlue to-white bg-clip-text text-transparent">
         Impulsados por la innovación
       </h2>
       <p class="lg:w-[50rem] font-light text-xl">
@@ -178,11 +178,11 @@
         class="flex flex-col lg:flex-row pt-[5.125rem] lg:space-x-[8.375rem] text-left w-full lg:w-auto"
       >
         <div class="lg:max-w-[51rem] space-y-[3.75rem] pt-24">
-          <article class="flex items-start gap-5">
+          <article class="flex items-start gap-5 p-6 rounded-2xl transition-all duration-300 hover:bg-white/5 hover:backdrop-blur-sm hover:shadow-xl hover:shadow-lightBlue/10">
             <img
               src="/svg_icons/upgrade.svg"
               alt="Innovar, automatizar y optimizar"
-              class="lg:size-[2.625rem]"
+              class="lg:size-[2.625rem] filter brightness-0 invert"
             />
             <span class>
               <h3 class="text-[2rem] leading-none font-bold">
@@ -195,11 +195,11 @@
               </p>
             </span>
           </article>
-          <article class="flex items-start gap-5">
+          <article class="flex items-start gap-5 p-6 rounded-2xl transition-all duration-300 hover:bg-white/5 hover:backdrop-blur-sm hover:shadow-xl hover:shadow-lightBlue/10">
             <img
               src="/svg_icons/workspace_premium.svg"
               alt="Comprometidos con la calidad"
-              class="lg:size-[2.625rem]"
+              class="lg:size-[2.625rem] filter brightness-0 invert"
             />
             <span>
               <h3 class="text-[2rem] leading-none font-bold">
@@ -215,13 +215,13 @@
           <a
             type="button"
             href="nosotros"
-            class="about-us bg-whiteBG text-deepGray text-base font-medium rounded-2xl space-x-2.5 inline-flex py-3 px-4 items-center w-auto"
+            class="about-us bg-gradient-to-r from-lightBlue to-lightPurple text-white text-base font-medium rounded-full space-x-2.5 inline-flex py-3 px-6 items-center w-auto transition-all duration-300 hover:shadow-lg hover:shadow-lightBlue/30 hover:scale-105"
           >
             Nosotros
             <img
               src="/svg_icons/arrow_upward_alt.svg"
               alt="Conoce todas las soluciones de desarrollo"
-              class="-rotate-90"
+              class="-rotate-90 invert"
             />
           </a>
         </div>
@@ -268,14 +268,14 @@
       id="toggle-services-container"
     >
       <nav
-        class="rounded-2xl divide-x divide-[#737575] bg-deepGray px-3.5 lg:px-5 py-3 lg:py-6 text-base lg:text-xl font-medium"
+        class="rounded-full divide-x divide-white/10 bg-white/5 backdrop-blur-xl border border-white/10 px-3.5 lg:px-5 py-3 lg:py-6 text-base lg:text-xl font-medium shadow-xl shadow-black/20"
         id="toggle-services"
       >
         <span class="pr-2 lg:pr-6">
           <button
             data-selected="true"
             type="button"
-            class="leading-none data-[selected=true]:bg-whiteBG data-[selected=true]:text-deepGray data-[selected=true]:rounded-xl"
+            class="leading-none data-[selected=true]:bg-gradient-to-r data-[selected=true]:from-lightBlue data-[selected=true]:to-lightPurple data-[selected=true]:text-white data-[selected=true]:rounded-full data-[selected=true]:shadow-lg data-[selected=true]:shadow-lightBlue/30 py-2 px-4 transition-all duration-300 hover:bg-white/10 rounded-full"
             value="development"
           >
             Desarrollo
@@ -284,7 +284,7 @@
         <span class="px-2 lg:px-6">
           <button
             type="button"
-            class="leading-none data-[selected=true]:bg-whiteBG data-[selected=true]:text-deepGray data-[selected=true]:rounded-xl"
+            class="leading-none data-[selected=true]:bg-gradient-to-r data-[selected=true]:from-lightBlue data-[selected=true]:to-lightPurple data-[selected=true]:text-white data-[selected=true]:rounded-full data-[selected=true]:shadow-lg data-[selected=true]:shadow-lightBlue/30 py-2 px-4 transition-all duration-300 hover:bg-white/10 rounded-full"
             value="marketing"
           >
             Marketing digital
@@ -293,7 +293,7 @@
         <span class="px-2 lg:px-6">
           <button
             type="button"
-            class="leading-none data-[selected=true]:bg-whiteBG data-[selected=true]:text-deepGray data-[selected=true]:rounded-xl"
+            class="leading-none data-[selected=true]:bg-gradient-to-r data-[selected=true]:from-lightBlue data-[selected=true]:to-lightPurple data-[selected=true]:text-white data-[selected=true]:rounded-full data-[selected=true]:shadow-lg data-[selected=true]:shadow-lightBlue/30 py-2 px-4 transition-all duration-300 hover:bg-white/10 rounded-full"
             value="blockchain"
           >
             IA/Blockchain
@@ -302,7 +302,7 @@
         <span class="pl-2 lg:pl-6">
           <button
             type="button"
-            class="leading-none data-[selected=true]:bg-whiteBG data-[selected=true]:text-deepGray data-[selected=true]:rounded-xl"
+            class="leading-none data-[selected=true]:bg-gradient-to-r data-[selected=true]:from-lightBlue data-[selected=true]:to-lightPurple data-[selected=true]:text-white data-[selected=true]:rounded-full data-[selected=true]:shadow-lg data-[selected=true]:shadow-lightBlue/30 py-2 px-4 transition-all duration-300 hover:bg-white/10 rounded-full"
             value="erpcrm"
           >
             ERP y CRM
@@ -373,7 +373,7 @@
             </article>
             <a
               type="button"
-              href="services/development"
+              href="./services/development.html"
               class="services-transition bg-whiteBG text-deepGray text-base font-medium rounded-2xl space-x-2.5 inline-flex py-3 px-4 items-center w-auto"
             >
               Conoce todas las soluciones de desarrollo
@@ -453,7 +453,7 @@
             </article>
             <a
               type="button"
-              href="services/marketing"
+              href="./services/marketing.html"
               class="services-transition bg-whiteBG text-deepGray text-base font-medium rounded-2xl space-x-2.5 inline-flex py-3 px-4 items-center"
             >
               Conoce todas las soluciones de marketing
@@ -532,7 +532,7 @@
             </article>
             <a
               type="button"
-              href="services/blockchain"
+              href="./services/blockchain.html"
               class="bg-whiteBG text-deepGray text-base font-medium rounded-2xl space-x-2.5 inline-flex py-3 px-4 items-center w-auto"
             >
               Conoce todas las soluciones de IA y blockchain
@@ -612,7 +612,7 @@
             </article>
             <a
               type="button"
-              href="services/erp"
+              href="./services/erp.html"
               class="services-transition bg-whiteBG text-deepGray text-base font-medium rounded-2xl space-x-2.5 inline-flex py-3 px-4 items-center w-auto"
             >
               Conoce todas las soluciones de ERP y CRM
@@ -1409,30 +1409,30 @@
       </div>
       <img src="/svg/logo_name.svg" alt="Koden" class="w-[5.375rem]" />
       <nav
-        class="z-10 rounded-2xl divide-x divide-[#737575] bg-deepGray px-5 py-6 flex items-center text-base font-medium"
+        class="z-10 rounded-full divide-x divide-white/10 backdrop-blur-xl bg-white/5 border border-white/10 px-5 py-6 flex items-center text-base font-medium shadow-xl shadow-black/20"
       >
         <a
           href="#"
           onclick="window.scrollTo({top:0, behavior:'smooth'})"
-          class="pr-2 lg:pr-6 leading-none"
+          class="pr-2 lg:pr-6 leading-none hover:text-lightBlue transition-colors duration-300"
           >Inicio</a
         >
-        <a href="#about" class="px-2 lg:px-6 leading-none">Nosotros</a>
-        <a href="#services" class="px-2 lg:px-6 leading-none">Servicios</a>
-        <a href="#work" class="px-2 lg:px-6 leading-none"
+        <a href="#about" class="px-2 lg:px-6 leading-none hover:text-lightBlue transition-colors duration-300">Nosotros</a>
+        <a href="#services" class="px-2 lg:px-6 leading-none hover:text-lightBlue transition-colors duration-300">Servicios</a>
+        <a href="#work" class="px-2 lg:px-6 leading-none hover:text-lightBlue transition-colors duration-300"
           >Trabaja con nosotros</a
         >
         <div class="pl-2 lg:pl-6">
           <a
             type="button"
             href="#contact"
-            class="bg-whiteBG rounded-xl lg:rounded-2xl leading-none text-deepGray px-2 lg:px-4 py-1.5 lg:py-3 flex items-center gap-[0.625rem]"
+            class="bg-gradient-to-r from-lightBlue to-lightPurple rounded-full leading-none text-white px-3 lg:px-5 py-1.5 lg:py-3 flex items-center gap-[0.625rem] transition-all duration-300 hover:shadow-lg hover:shadow-lightBlue/30 hover:scale-105"
           >
             Contacto
             <img
               src="/svg_icons/arrow_outward.svg"
               alt="Contacto flecha"
-              class="size-5 lg:size-6"
+              class="size-5 lg:size-6 invert"
             />
           </a>
         </div>
